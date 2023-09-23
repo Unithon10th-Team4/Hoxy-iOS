@@ -11,7 +11,7 @@ import SwiftUI
 struct ProfileInRadarView: View {
     @State private var rotationDegree = Angle.zero
     let radarResourceName: String
-    let imageResourceName: String
+    let imageResourceUrl: String
     let fandomImageName: String
     let radarState: RadarState
     var body: some View {
@@ -28,24 +28,28 @@ struct ProfileInRadarView: View {
                 .opacity(radarState == .active ? 1.0 : 0.0)
             
             // 프로필 이미지 뷰
-            Image("rader_frame")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 80)
-                .offset(y:5)
-                .overlay(alignment: .center) {
-                    Image(imageResourceName)
-                        .resizable()
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                        .frame(width: 60, height: 60)
-                }
-                .overlay(alignment: .bottomTrailing) {
-                    Image(fandomImageName)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 20)
-                }
-
+            AsyncImage(url: URL(string: imageResourceUrl)) { image in
+                Image("rader_frame")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 80)
+                    .offset(y:5)
+                    .overlay(alignment: .center) {
+                        image
+                            .resizable()
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .frame(width: 60, height: 60)
+                    }
+                    .overlay(alignment: .bottomTrailing) {
+                        Image(fandomImageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 20)
+                    }
+            } placeholder: {
+                ProgressView()
+                    .frame(width: 54, height: 54)
+            }
         }
     }
 }
@@ -54,7 +58,7 @@ struct ProfileInRadarView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileInRadarView(
             radarResourceName: "myRadar",
-            imageResourceName: "sample_profile1",
+            imageResourceUrl: "sample_profile1",
             fandomImageName: "fandom",
             radarState: .active
         )

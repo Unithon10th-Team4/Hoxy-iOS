@@ -13,9 +13,16 @@ class HomeViewModel: ObservableObject {
     init() {
         self.fetchCurrentUser()
     }
-    
+}
+
+extension HomeViewModel {
     private func fetchCurrentUser() {
-//    https://211e-2001-2d8-f1a2-5f9a-f4bb-2a2a-3711-91a0.ngrok-free.app/members/test
+        APIService.shared.currentUserData { user in
+            self.currentUser = User(name: user.name,
+                               fanclubId: user.fanclubId,
+                               profileImageUrl: user.profileImageUrl,
+                               point: user.point)
+        }
     }
     
     func sendEmojiMessage(emoji sendedEmoji: String) {
