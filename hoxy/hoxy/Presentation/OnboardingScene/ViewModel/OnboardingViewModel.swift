@@ -16,6 +16,13 @@ class UserViewModel: ObservableObject {
     }
     
     func setUserInformation(username: String, profileImageData: Data, artist: String) {
-        self.currentUser = User(name: username, profileImage: profileImageData, favoriteArtist: artist)
+        self.currentUser = User(
+            name: username,
+            fanclubId: "UUID",
+            profileImage: profileImageData,
+            latitude: 37.545494,
+            longitude: 126.952643,
+            fcmToekn: "fcmToken"
+        )
     }
 }

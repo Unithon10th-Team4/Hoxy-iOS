@@ -9,6 +9,9 @@ import SwiftUI
 
 struct User {
     let name: String
+    let fanclubId: String
     let profileImage: Data
-    let favoriteArtist: String
+    var latitude: Double
+    var longitude: Double
+    let fcmToekn: String
 }

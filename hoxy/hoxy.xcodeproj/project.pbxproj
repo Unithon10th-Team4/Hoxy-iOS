@@ -41,7 +41,8 @@
 		ADC1E74D2ABF034800E4A87D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E74C2ABF034800E4A87D /* OnboardingView.swift */; };
 		ADC1E74F2ABF05CB00E4A87D /* SettingFandomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E74E2ABF05CB00E4A87D /* SettingFandomView.swift */; };
 		ADC1E7562ABF124800E4A87D /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7552ABF124800E4A87D /* OnboardingViewModel.swift */; };
-		ADC1E75B2ABF55AA00E4A87D /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = ADC1E75A2ABF55AA00E4A87D /* FirebaseMessaging */; };
+		ADC1E75F2ABF6F8300E4A87D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E75E2ABF6F8300E4A87D /* HomeViewModel.swift */; };
+		ADC1E7612ABF6F8E00E4A87D /* MessageArchiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7602ABF6F8E00E4A87D /* MessageArchiveViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,8 @@
 		ADC1E74C2ABF034800E4A87D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		ADC1E74E2ABF05CB00E4A87D /* SettingFandomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFandomView.swift; sourceTree = "<group>"; };
 		ADC1E7552ABF124800E4A87D /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		ADC1E75E2ABF6F8300E4A87D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		ADC1E7602ABF6F8E00E4A87D /* MessageArchiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageArchiveViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +340,8 @@
 		ADC1E7542ABF11ED00E4A87D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				ADC1E75E2ABF6F8300E4A87D /* HomeViewModel.swift */,
+				ADC1E7602ABF6F8E00E4A87D /* MessageArchiveViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -451,7 +456,9 @@
 				7D985E452ABF1C850046805F /* CornerRadiusStyle.swift in Sources */,
 				7D985E4C2ABF250A0046805F /* RankingViewModel.swift in Sources */,
 				AD5523642ABE7E2700136109 /* Color+Extension.swift in Sources */,
+				ADC1E75F2ABF6F8300E4A87D /* HomeViewModel.swift in Sources */,
 				7D3D6CD02ABE7332008C57FA /* ContentView.swift in Sources */,
+				ADC1E7612ABF6F8E00E4A87D /* MessageArchiveViewModel.swift in Sources */,
 				ADC1E7412ABEDABE00E4A87D /* RankingView.swift in Sources */,
 				ADC1E7392ABE982B00E4A87D /* EmojiSheetView.swift in Sources */,
 				7D985E4E2ABF25A80046805F /* Fandom.swift in Sources */,
