@@ -9,7 +9,7 @@ import Foundation
 
 class RankingViewModel: ObservableObject {
     
-    @Published var topFandomList = [Fandom].init(repeating: Fandom(id: "", logoImagePath: "", fandomName: "", artistName: "", coins: 0), count: 10)
+    @Published var topFandomList = [Fandom].init(repeating: Fandom(id: "", logoImagePath: "", fandomName: "", fandomDescription: "", coins: 0, artistName: "", artistImagePath: ""), count: 10)
     let dateDescription: String
     
     init() {
@@ -29,23 +29,17 @@ extension RankingViewModel {
         
         APIService.shared.fanclubRanking { [weak self] responseList in
             var fandomList = responseList.map {
-                Fandom(id: $0.fanclubID, logoImagePath: $0.logoURL, fandomName: $0.name, artistName: $0.artist, coins: $0.point)
-            }
+                Fandom(id: $0.fanclubID, logoImagePath: $0.logoURL, fandomName: $0.name, fandomDescription: $0.fanclubInfo, coins: $0.point, artistName: $0.artist, artistImagePath: $0.artistURL)            }
             if fandomList.count < 4 {
-                let emptyList = [Fandom].init(repeating: Fandom(id: "", logoImagePath: "", fandomName: "", artistName: "", coins: 0), count: 4 - fandomList.count)
+                let emptyList = [Fandom].init(repeating: Fandom(id: "", logoImagePath: "", fandomName: "", fandomDescription:"", coins: 0, artistName: "", artistImagePath: ""), count: 4 - fandomList.count)
                 fandomList.append(contentsOf: emptyList)
             }
             self?.topFandomList = fandomList
         }
     }
     
-    func getFandomDetail(id: String) -> FandomDetail {
-        return FandomDetail(logoImagePath: "https://qph.cf2.quoracdn.net/main-qimg-bdca6c4b24202b4e6d94a361bb4a4450-lq",
-                            fandomName: "아미",
-                            fandomDescription: "공식 팬덤입니다",
-                            coins: 1242,
-                            artistName: "bts",
-                            artistImagePath: "https://www.billboard.com/wp-content/uploads/2022/01/bts-2019-grammys-billboard-1548.jpg?w=875&h=583&crop=1")
+    func getFandomDetail(fandom: Fandom) -> FandomDetail {
+        return FandomDetail(logoImagePath: fandom.logoImagePath, fandomName: fandom.fandomName, fandomDescription: fandom.fandomDescription, coins: fandom.coins, artistName: fandom.artistName, artistImagePath: fandom.artistImagePath)
     }
 }
 

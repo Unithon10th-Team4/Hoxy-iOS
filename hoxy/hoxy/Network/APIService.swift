@@ -38,7 +38,10 @@ class APIService {
     }
 }
 
+// MARK: Ranking Scene
 extension APIService {
+    
+    /// 팬클럽 랭킹 조회
     func fanclubRanking(onSuccess: @escaping (([FanclubRankingResponse]) -> Void), onError: ((Error) -> Void)? = nil) {
         let urlString = "\(baseUrl)fanclubs"
         print(urlString)
@@ -46,6 +49,22 @@ extension APIService {
             switch result {
             case .success(let data):
                 let response = try! JSONDecoder().decode([FanclubRankingResponse].self, from: data)
+                onSuccess(response)
+            case .failure(let error):
+                onError?(error)
+            }
+        }
+    }
+    
+    /// 팬클럽 상세 조회
+    func fanclubDetail(id: String,
+                       onSuccess: @escaping ((FanclubDetailResponse) -> Void), onError: ((Error) -> Void)? = nil) {
+        let urlString = "\(baseUrl)fanclubs/\(id)"
+        print(urlString)
+        self.fetchRequest(url: urlString) { result in
+            switch result {
+            case .success(let data):
+                let response = try! JSONDecoder().decode(FanclubDetailResponse.self, from: data)
                 onSuccess(response)
             case .failure(let error):
                 onError?(error)

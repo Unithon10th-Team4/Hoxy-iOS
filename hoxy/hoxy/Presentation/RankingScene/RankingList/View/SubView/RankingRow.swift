@@ -59,9 +59,3 @@ struct RankingRow: View {
     }
 }
 
-struct RankingRow_Previews: PreviewProvider {
-    static var previews: some View {
-        let fandom = Fandom(id: "dd", logoImagePath: "dd", fandomName: "몬베베", artistName: "몬스터엑스", coins: 3413)
-        RankingRow(fandom: fandom, rank: 3)
-    }
-}
