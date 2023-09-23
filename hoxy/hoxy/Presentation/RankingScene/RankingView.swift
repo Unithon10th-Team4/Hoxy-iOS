@@ -33,7 +33,7 @@ struct RankingView: View {
                     HStack {
                         Spacer()
                         NavigationLink {
-                            RankingDetailView(logoImage: UIImage(named: "background")!, fandomName: "유애나", fandomDescription: "Dscroption", coins: 2314)
+                            RankingDetailView(fandomName: "유애나", coins: 2314, artistName: "아이유")
                         } label: {
                             RankingTopView(logoImage: UIImage(named: "background")!, rank: 2, fandomName: "유애나", coins: 2314)
                         }
@@ -41,7 +41,7 @@ struct RankingView: View {
                         Spacer()
                         
                         NavigationLink {
-                            RankingDetailView(logoImage: UIImage(named: "background")!, fandomName: "아미", fandomDescription: "Dscroption", coins: 2314)
+                            RankingDetailView(fandomName: "아미", coins: 2314, artistName: "방탄소년단")
                         } label: {
                             RankingTopView(logoImage: UIImage(named: "background")!, rank: 1, fandomName: "아미", coins: 2314)
                         }
@@ -49,7 +49,7 @@ struct RankingView: View {
                         Spacer()
                         
                         NavigationLink {
-                            RankingDetailView(logoImage: UIImage(named: "background")!, fandomName: "몬베베", fandomDescription: "Dscroption", coins: 2314)
+                            RankingDetailView(fandomName: "몬베베", coins: 2314, artistName: "몬스타엑스")
                         } label: {
                             RankingTopView(logoImage: UIImage(named: "background")!, rank: 3, fandomName: "몬베베", coins: 2314)
                         }
@@ -63,7 +63,7 @@ struct RankingView: View {
                         let image = UIImage(named: "background")!
                         ZStack(alignment: .leading) {
                             NavigationLink {
-                                RankingDetailView(logoImage: UIImage(named: "background")!, fandomName: item, fandomDescription: "Description", coins: 32)
+                                RankingDetailView(fandomName: item, coins: 32, artistName: item)
                             } label: {
                                 EmptyView()
                             }.opacity(0)
