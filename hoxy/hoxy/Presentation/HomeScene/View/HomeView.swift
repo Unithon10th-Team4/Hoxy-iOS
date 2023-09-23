@@ -92,28 +92,28 @@ struct HomeView: View {
             }
             
             // MARK: - Show animation when emoji selected
-            if isEmojiSelected,
-               let selectedEmoji = selectedEmoji {
-                Image(selectedEmoji.rawValue)
-                    .resizable()
-                    .scaledToFit()
-                    .scaleEffect(animatingEmojiScale)
-                    .opacity(animatingEmojiOpacity)
-                    .shadow(radius: 4)
-                    .onAppear {
-                        withAnimation(.linear(duration: 1.0)) {
-                            animatingEmojiScale = CGFloat(0.5)
-                        }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            if isEmojiSelected {
+                if let selectedEmoji = selectedEmoji {
+                    Image(selectedEmoji.rawValue)
+                        .resizable()
+                        .scaledToFit()
+                        .scaleEffect(animatingEmojiScale)
+                        .opacity(animatingEmojiOpacity)
+                        .shadow(radius: 4)
+                        .onAppear {
                             withAnimation(.linear(duration: 1.0)) {
-                                animatingEmojiOpacity = Double.zero
+                                animatingEmojiScale = CGFloat(0.5)
+                            }
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                withAnimation(.linear(duration: 1.0)) {
+                                    animatingEmojiOpacity = Double.zero
+                                }
+                            }
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                                animatingEmojiScale = CGFloat.zero
                             }
                         }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                            animatingEmojiScale = CGFloat.zero
-                        }
-                    }
-                
+                }
                 // MARK: - Toast message
                 VStack {
                     Spacer()
@@ -122,17 +122,23 @@ struct HomeView: View {
                 }
                 .opacity(toastingMessageOpacity)
                 .onAppear {
+                    // show toast message
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                         withAnimation(.linear(duration: 0.5)) {
                             toastMessageY = CGFloat(-80)
                             toastingMessageOpacity = 1.0
                         }
                     }
+                    // dismiss toast message
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                         withAnimation(.linear(duration: 1.0)) {
                             toastMessageY = CGFloat(-20)
                             toastingMessageOpacity = CGFloat.zero
                         }
+                    }
+                    // toast가 다시 뜨지 않도록
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+                        isEmojiSelected = false
                     }
                 }
             }
@@ -156,7 +162,7 @@ struct HomeView_Previews: PreviewProvider {
 struct ToastMessageView: View {
     var body: some View {
         HStack {
-            Text("🎉 1코인이 적립되었어요!")
+            Text("🎉 5코인이 적립되었어요!")
                 .foregroundColor(.white)
                 .padding(.leading, 20)
                 .padding(.vertical, 15)
