@@ -133,6 +133,47 @@ extension APIService {
             }
         }
     }
+    
+    func updateCurrentLocation() {
+        let url = "\(baseUrl)members/\(UserViewModel.shared.currentUser?.name ?? "test")/location"
+        var request = URLRequest(url: URL(string: url)!)
+        request.httpMethod = "PATCH"
+        let jsonBody = [
+                            "latitude": 37.545492,
+                            "longitude": 126.952641,
+                        ]
+        let jsonData = try! JSONSerialization.data(withJSONObject: jsonBody, options: [])
+        request.httpBody = jsonData
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        self.fetchRequest(request: request) { result in
+            switch result {
+            case .success(let _):
+                print("Success")
+            case .failure(let _):
+                print("Error")
+            }
+        }
+    }
+    
+    func updateUserState() {
+        let url = "\(baseUrl)members/\(UserViewModel.shared.currentUser?.name ?? "test")/status"
+        var request = URLRequest(url: URL(string: url)!)
+        request.httpMethod = "PATCH"
+        let jsonBody = [ "online": false ]
+        let jsonData = try! JSONSerialization.data(withJSONObject: jsonBody, options: [])
+        request.httpBody = jsonData
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        self.fetchRequest(request: request) { result in
+            switch result {
+            case .success(let _):
+                print("Success")
+            case .failure(let _):
+                print("Error")
+            }
+        }
+    }
 }
 
 // MARK: - Home Scene
