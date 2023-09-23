@@ -13,29 +13,28 @@ struct ContentView: View {
     }
     @EnvironmentObject var viewModel: UserViewModel
     var body: some View {
-        if viewModel.currentUser == nil {
+        TabView {
+            HomeView()
+                .tabItem {
+                    Label(
+                        "탐색",
+                        systemImage: "house.fill")
+                }
+            RankingView()
+                .tabItem {
+                    Label(
+                        "랭킹",
+                        systemImage: "star.fill")
+                }
+            MyProfileView()
+                .tabItem {
+                    Label(
+                        "마이",
+                        systemImage: "person.fill")
+                }
+        }
+        .fullScreenCover(isPresented: .constant(viewModel.currentUser == nil)) {
             OnboardingView()
-        } else {
-            TabView {
-                HomeView()
-                    .tabItem {
-                        Label(
-                            "탐색",
-                            systemImage: "house.fill")
-                    }
-                RankingView()
-                    .tabItem {
-                        Label(
-                            "랭킹",
-                            systemImage: "star.fill")
-                    }
-                MyProfileView()
-                    .tabItem {
-                        Label(
-                            "마이",
-                            systemImage: "person.fill")
-                    }
-            }
         }
     }
 }
