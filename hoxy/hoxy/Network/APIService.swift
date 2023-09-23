@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class APIService {
     
@@ -33,6 +34,25 @@ class APIService {
             }
             onComplete(.success(safeData))
             
+        }
+        task.resume()
+    }
+    
+    private func fetchRequest(request: URLRequest, onComplete: @escaping (Result<Data, Error>) -> Void) {
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                onComplete(.failure(error))
+                return
+            }
+            
+            guard let safeData = data else {
+                guard let httpResponse = response as? HTTPURLResponse else { return }
+                print("Error: no data")
+                onComplete(.failure(NSError(domain: "no data", code: httpResponse.statusCode, userInfo: nil)))
+                return
+            }
+            onComplete(.success(safeData))
         }
         task.resume()
     }
@@ -82,6 +102,31 @@ extension APIService {
             switch result {
             case .success(let data):
                 let response = try! JSONDecoder().decode([MessageResponse].self, from: data)
+                onSuccess(response)
+            case .failure(let error):
+                onError?(error)
+            }
+        }
+    }
+    
+    func nearbyUser(onSuccess: @escaping (([NearUserResponse]) -> Void), onError: ((Error) -> Void)? = nil) {
+        
+        let url = "\(baseUrl)members/\(UserViewModel.shared.currentUser?.name ?? "test")/near"
+        var request = URLRequest(url: URL(string: url)!)
+        request.httpMethod = "GET"
+        let jsonBody = [
+                            "latitude": 37.545492,
+                            "longitude": 126.952641,
+                            "distance": 5
+                        ]
+        let jsonData = try! JSONSerialization.data(withJSONObject: jsonBody, options: [])
+        request.httpBody = jsonData
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        self.fetchRequest(request: request) { result in
+            switch result {
+            case .success(let data):
+                let response = try! JSONDecoder().decode([NearUserResponse].self, from: data)
                 onSuccess(response)
             case .failure(let error):
                 onError?(error)
