@@ -156,6 +156,14 @@
 			path = ReankingScene;
 			sourceTree = "<group>";
 		};
+		7DA285372ABEEFFC00427090 /* MyProfileScene */ = {
+			isa = PBXGroup;
+			children = (
+				AD5523602ABE7BD700136109 /* MyProfileView.swift */,
+			);
+			path = MyProfileScene;
+			sourceTree = "<group>";
+		};
 		AD55235B2ABE7B9300136109 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,7 +171,7 @@
 				AD5523622ABE7E1900136109 /* Extensions */,
 				ADC1E7372ABE97AB00E4A87D /* HomeScene */,
 				7DA285242ABEB40B00427090 /* ReankingScene */,
-				AD5523602ABE7BD700136109 /* MyProfileView.swift */,
+				7DA285372ABEEFFC00427090 /* MyProfileScene */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
