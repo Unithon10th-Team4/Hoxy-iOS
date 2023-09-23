@@ -11,6 +11,7 @@
 		7D3D6CD02ABE7332008C57FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D6CCF2ABE7332008C57FA /* ContentView.swift */; };
 		7D3D6CD22ABE7335008C57FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3D6CD12ABE7335008C57FA /* Assets.xcassets */; };
 		7D3D6CD52ABE7335008C57FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3D6CD42ABE7335008C57FA /* Preview Assets.xcassets */; };
+		7D985E452ABF1C850046805F /* CornerRadiusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D985E442ABF1C850046805F /* CornerRadiusStyle.swift */; };
 		7DA2851F2ABEA8C300427090 /* CircleImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2851E2ABEA8C300427090 /* CircleImageModifier.swift */; };
 		7DA285212ABEAB0700427090 /* BottomTrailingBadgeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA285202ABEAB0700427090 /* BottomTrailingBadgeModifier.swift */; };
 		7DA285262ABEB43500427090 /* RankingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA285252ABEB43500427090 /* RankingRow.swift */; };
@@ -33,6 +34,7 @@
 		7D3D6CCF2ABE7332008C57FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D3D6CD12ABE7335008C57FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D3D6CD42ABE7335008C57FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7D985E442ABF1C850046805F /* CornerRadiusStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusStyle.swift; sourceTree = "<group>"; };
 		7DA2851E2ABEA8C300427090 /* CircleImageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageModifier.swift; sourceTree = "<group>"; };
 		7DA285202ABEAB0700427090 /* BottomTrailingBadgeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTrailingBadgeModifier.swift; sourceTree = "<group>"; };
 		7DA285252ABEB43500427090 /* RankingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingRow.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				7DA2851E2ABEA8C300427090 /* CircleImageModifier.swift */,
 				7DA285202ABEAB0700427090 /* BottomTrailingBadgeModifier.swift */,
 				7DA2852E2ABEC51600427090 /* RectangleContainerModifier.swift */,
+				7D985E442ABF1C850046805F /* CornerRadiusStyle.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				7DA285262ABEB43500427090 /* RankingRow.swift in Sources */,
 				7DA2852F2ABEC51600427090 /* RectangleContainerModifier.swift in Sources */,
 				7DA285352ABECF0B00427090 /* RankingTopView.swift in Sources */,
+				7D985E452ABF1C850046805F /* CornerRadiusStyle.swift in Sources */,
 				AD5523642ABE7E2700136109 /* Color+Extension.swift in Sources */,
 				7D3D6CD02ABE7332008C57FA /* ContentView.swift in Sources */,
 				ADC1E7412ABEDABE00E4A87D /* RankingView.swift in Sources */,
