@@ -12,5 +12,6 @@ struct FandomDetail {
     let fandomName: String
     let fandomDescription: String
     let coins: Int
+    let artistName: String
     let artistImagePath: String
 }

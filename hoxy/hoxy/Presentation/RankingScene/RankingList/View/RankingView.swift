@@ -9,7 +9,6 @@ import SwiftUI
 
 struct RankingView: View {
     
-    let items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]
     @ObservedObject var viewModel = RankingViewModel()
     
     var body: some View {
@@ -36,7 +35,7 @@ struct RankingView: View {
                         HStack {
                             Spacer()
                             NavigationLink {
-                                RankingDetailView(fandomName: "유애나", coins: 2314, artistName: "아이유")
+                                RankingDetailView(model: self.viewModel.getFandomDetail(id: viewModel.topFandomList[1].id))
                             } label: {
                                 RankingTopView(fandom: viewModel.topFandomList[1], rank: 2)
                             }
@@ -44,7 +43,7 @@ struct RankingView: View {
                             Spacer()
                             
                             NavigationLink {
-                                RankingDetailView(fandomName: "아미", coins: 2314, artistName: "방탄소년단")
+                                RankingDetailView(model: self.viewModel.getFandomDetail(id: viewModel.topFandomList[0].id))
                             } label: {
                                 RankingTopView(fandom: viewModel.topFandomList[0], rank: 1)
                             }
@@ -52,7 +51,7 @@ struct RankingView: View {
                             Spacer()
                             
                             NavigationLink {
-                                RankingDetailView(fandomName: "몬베베", coins: 2314, artistName: "몬스타엑스")
+                                RankingDetailView(model: self.viewModel.getFandomDetail(id: viewModel.topFandomList[2].id))
                             } label: {
                                 RankingTopView(fandom: viewModel.topFandomList[2], rank: 3)
                             }
@@ -65,7 +64,7 @@ struct RankingView: View {
                             
                             ZStack(alignment: .leading) {
                                 NavigationLink {
-                                    RankingDetailView(fandomName: fandom.fandomName, coins: 32, artistName: fandom.artistName)
+                                    RankingDetailView(model: self.viewModel.getFandomDetail(id: fandom.id))
                                 } label: {
                                     EmptyView()
                                 }.opacity(0)

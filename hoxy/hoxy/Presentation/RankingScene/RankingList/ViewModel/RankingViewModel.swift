@@ -43,5 +43,14 @@ extension RankingViewModel {
         
         self.topFandomList = testData
     }
+    
+    func getFandomDetail(id: String) -> FandomDetail {
+        return FandomDetail(logoImagePath: "",
+                            fandomName: "아미",
+                            fandomDescription: "공식 팬덤입니다",
+                            coins: 1242,
+                            artistName: "bts",
+                            artistImagePath: "sss")
+    }
 }
 
