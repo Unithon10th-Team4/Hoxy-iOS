@@ -35,14 +35,14 @@ struct HomeView: View {
             
             ProfileInRadarView(
                 radarResourceName: "myRadar",
-                imageResourceName: "myImage",
-                fandomName: "fandom",
+                imageResourceName: "sample_profile1",
+                fandomImageName: "fandom",
                 radarState: .active
             )
             ProfileInRadarView(
                 radarResourceName: "anotherRadar",
-                imageResourceName: "anotherImage",
-                fandomName: "fandom",
+                imageResourceName: "sample_profile2",
+                fandomImageName: "fandom",
                 radarState: showEmojiSheet ? .active : .inactive
             )
             .overlay {
@@ -143,34 +143,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-    }
-}
-
-struct ProfileInRadarView: View {
-    @State private var rotationDegree = Angle.zero
-    let radarResourceName: String
-    let imageResourceName: String
-    let fandomName: String
-    let radarState: RadarState
-    var body: some View {
-        ZStack {
-            Image(radarResourceName)
-                .rotationEffect(rotationDegree)
-                .onAppear {
-                    withAnimation(.linear(duration: 2.0).repeatForever(autoreverses: false)) {
-                        rotationDegree = Angle(degrees: -360.0)
-                    }
-                }
-                .opacity(radarState == .active ? 1.0 : 0.0)
-            Image(imageResourceName)
-                .offset(y: 3)
-                .overlay(alignment: .bottomTrailing) {
-                    Image(fandomName)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 20)
-                }
-        }
     }
 }
 
