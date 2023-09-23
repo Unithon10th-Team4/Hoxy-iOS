@@ -15,7 +15,7 @@ struct RankingDetailCoinView: View {
         
         HStack {
             Text("누적 코인")
-                .font(.title2)
+                .font(.title3)
             
             Text("\(coins)C")
                 .font(.title)
