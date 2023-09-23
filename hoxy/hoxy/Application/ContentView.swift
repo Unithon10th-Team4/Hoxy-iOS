@@ -14,17 +14,17 @@ struct ContentView: View {
     @EnvironmentObject var viewModel: UserViewModel
     var body: some View {
         TabView {
-            HomeView()
-                .tabItem {
-                    Label(
-                        "탐색",
-                        systemImage: "house.fill")
-                }
             RankingView()
                 .tabItem {
                     Label(
                         "랭킹",
                         systemImage: "star.fill")
+                }
+            HomeView()
+                .tabItem {
+                    Label(
+                        "탐색",
+                        systemImage: "house.fill")
                 }
             MyProfileView()
                 .tabItem {

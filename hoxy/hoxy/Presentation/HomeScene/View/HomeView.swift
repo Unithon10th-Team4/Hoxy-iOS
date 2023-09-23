@@ -15,7 +15,7 @@ enum RadarState {
 struct HomeView: View {
     @State var selectedEmoji: Emoji?
     @State private var isEmojiSelected = false
-    @State private var showEmojiSheet = false
+    @State private var showEmojiSheet = Array(repeating: false, count: 4)
     
     // Properties for emoji animation
     @State private var animatingEmojiScale = CGFloat.zero
@@ -29,6 +29,9 @@ struct HomeView: View {
     @State private var showMessageArchive = false
     
     @ObservedObject private var viewModel = HomeViewModel()
+    let nearFansOffset = [(80, -200), (-60, -220), (-20, 100), (100, 280)]
+    @State private var opacityNearFans = Array(repeating: CGFloat(1.0), count: 4)
+    let nearFansImage = ["https://plowithmebucket.s3.ap-northeast-2.amazonaws.com/8679704b-aae0-4990-b05b-0bf2459e6fd9aespa.png"]
     var body: some View {
         ZStack {
             Image("background")
@@ -41,25 +44,34 @@ struct HomeView: View {
                 fandomImageName: "fandom",
                 radarState: .active
             )
-            ProfileInRadarView(
-                radarResourceName: "anotherRadar",
-                // TODO: - 주변 사람 데이터
-                imageResourceUrl: viewModel.currentUser?.profileImageUrl ?? "",
-                fandomImageName: "fandom",
-                radarState: showEmojiSheet ? .active : .inactive
-            )
-            .overlay {
-                EmojiSheetView(selectedEmoji: $selectedEmoji)
-                    .offset(y: 80)
-                    .opacity(showEmojiSheet ? 1.0 : 0.0)
+            
+            ForEach(0..<viewModel.nearbyUsersUrl.count) { index in
+                ProfileInRadarView(
+                    radarResourceName: "anotherRadar",
+                    // TODO: - 주변 사람 데이터
+                    imageResourceUrl: viewModel.nearbyUsersUrl[index],
+                    fandomImageName: "fandom",
+                    radarState: showEmojiSheet[index] ? .active : .inactive
+                )
+                .overlay {
+                    EmojiSheetView(selectedEmoji: $selectedEmoji)
+                        .offset(y: 80)
+                        .opacity(showEmojiSheet[index] ? 1.0 : 0.0)
+                }
+                .onTapGesture {
+                    showEmojiSheet[index].toggle()
+                }
+                .onChange(of: selectedEmoji, perform: { newValue in
+                    showEmojiSheet[index] = false
+                })
+                .offset(x: CGFloat(nearFansOffset[index].0), y: CGFloat(nearFansOffset[index].1))
+                .opacity(opacityNearFans[index])
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + TimeInterval(index)) {
+                        opacityNearFans[index] = 1.0
+                    }
+                }
             }
-            .onTapGesture {
-                showEmojiSheet.toggle()
-            }
-            .onChange(of: selectedEmoji, perform: { newValue in
-                showEmojiSheet = false
-            })
-            .offset(x: 80, y: -200)
             
             // MARK: - Message Button
             VStack(alignment: .leading) {
@@ -143,8 +155,11 @@ struct HomeView: View {
                 }
             }
         }
+        .onAppear {
+            viewModel.fetchNearbyUser()
+        }
         .sheet(isPresented: $showMessageArchive) {
-            MessageArchiveView(senderUsername: "몬스타엑스최고")
+            MessageArchiveView()
                 .presentationDetents([.medium, .height(CGFloat(600))])
         }
         .onChange(of: selectedEmoji) { _ in
