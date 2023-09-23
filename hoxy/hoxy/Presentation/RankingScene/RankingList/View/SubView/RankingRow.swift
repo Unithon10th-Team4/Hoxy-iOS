@@ -9,25 +9,22 @@ import SwiftUI
 
 struct RankingRow: View {
     
-    let uiImage: UIImage
+    let fandom: Fandom
     let rank: Int
-    let fandomName: String
-    let artistName: String
-    let coins: Int
     
     var body: some View {
         HStack {
-            Image(uiImage: uiImage)
+            Image(uiImage: UIImage(named: "background")!)
                 .resizable()
                 .modifier(CircleImageModifier())
                 .frame(width: 54, height: 54)
                 .modifier(BottomTrailingBadgeModifier(strokeColor: .clear, text: String(rank)))
             
             VStack(alignment: .leading) {
-                Text(fandomName)
+                Text(fandom.fandomName)
                     .font(.headline)
                     .fontWeight(.bold)
-                Text("\(artistName) | \(coins) 코인")
+                Text("\(fandom.artistName) | \(fandom.coins) 코인")
                     .font(.body)
                     .foregroundColor(.gray)
             }
@@ -55,6 +52,7 @@ struct RankingRow: View {
 
 struct RankingRow_Previews: PreviewProvider {
     static var previews: some View {
-        RankingRow(uiImage: UIImage(named: "background")!, rank: 3, fandomName: "엑소엘", artistName: "엑소", coins: 1235)
+        let fandom = Fandom(id: "dd", logoImagePath: "dd", fandomName: "몬베베", artistName: "몬스터엑스", coins: 3413)
+        RankingRow(fandom: fandom, rank: 3)
     }
 }

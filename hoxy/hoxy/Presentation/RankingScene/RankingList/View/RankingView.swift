@@ -74,7 +74,7 @@ struct RankingView: View {
                                     EmptyView()
                                 }.opacity(0)
                                 
-                                RankingRow(uiImage: image, rank: 2, fandomName: item, artistName: "엑소", coins: 1234)
+                                RankingRow(fandom: Fandom(id: "dd", logoImagePath: "dd", fandomName: item, artistName: "몬스터엑스", coins: 3413), rank: 3)
                             }
                         }
                         .listStyle(.plain)
