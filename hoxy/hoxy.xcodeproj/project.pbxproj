@@ -68,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D3086B82ABF479300B52A66 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7DA285272ABEBB3900427090 /* RankingDetailView.swift */,
+				7D985E432ABF125E0046805F /* SubView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7D3D6CC12ABE7332008C57FA = {
 			isa = PBXGroup;
 			children = (
@@ -145,8 +154,7 @@
 		7D985E4A2ABF24F10046805F /* RankingDetail */ = {
 			isa = PBXGroup;
 			children = (
-				7DA285272ABEBB3900427090 /* RankingDetailView.swift */,
-				7D985E432ABF125E0046805F /* SubView */,
+				7D3086B82ABF479300B52A66 /* View */,
 			);
 			path = RankingDetail;
 			sourceTree = "<group>";
