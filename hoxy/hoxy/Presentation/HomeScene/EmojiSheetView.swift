@@ -21,7 +21,7 @@ struct EmojiSheetView: View {
     var body: some View {
         HStack(spacing: 10) {
             if let _ = selectedEmoji {
-                Text("이미 반응을 보냈어요!")
+                Text("이미 보낸 사용자에요!")
                     .foregroundColor(.white)
             } else {
                 ForEach(emojis, id: \.self) { emoji in

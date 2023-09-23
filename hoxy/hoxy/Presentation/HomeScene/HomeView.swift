@@ -17,28 +17,32 @@ struct HomeView: View {
     @State private var isEmojiSelected = false
     @State private var showEmojiSheet = false
     
-    // properties for emoji animation
+    // Properties for emoji animation
     @State private var animatingEmojiScale = CGFloat.zero
     @State private var animatingEmojiOpacity = 1.0
     
-    // properties for toast message
+    // Properties for toast message
     @State private var toastingMessageOpacity = 1.0
     @State private var toastMessageY = CGFloat(-20)
+    
+    // Properties for message modal
+    @State private var showMessageArchive = false
     var body: some View {
         ZStack {
             Image("background")
                 .resizable()
                 .scaledToFill()
-                .scaleEffect(1.2)
             
             ProfileInRadarView(
                 radarResourceName: "myRadar",
                 imageResourceName: "myImage",
+                fandomName: "fandom",
                 radarState: .active
             )
             ProfileInRadarView(
                 radarResourceName: "anotherRadar",
                 imageResourceName: "anotherImage",
+                fandomName: "fandom",
                 radarState: showEmojiSheet ? .active : .inactive
             )
             .overlay {
@@ -50,6 +54,39 @@ struct HomeView: View {
                 showEmojiSheet.toggle()
             }
             .offset(x: 80, y: -200)
+            
+            // MARK: - Message Button
+            VStack(alignment: .leading) {
+                Spacer()
+                HStack {
+                    Button {
+                        showMessageArchive = true
+                    } label: {
+                        Circle()
+                            .frame(width: 54)
+                            .foregroundColor(.black)
+                            .overlay(
+                                Image(systemName: "envelope.fill")
+                                    .foregroundColor(.white)
+                                    .font(.title3)
+                            )
+                            .overlay(alignment: .topTrailing) {
+                                ZStack {
+                                    Circle()
+                                        .frame(width: 20)
+                                        .foregroundColor(Color(hex: 0xF437CB))
+                                    Text("99+")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 8, weight: .medium))
+                                }
+                            }
+                    }
+                    .padding()
+                    .padding(.bottom, 80)
+
+                    Spacer()
+                }
+            }
             
             // MARK: - Show animation when emoji selected
             if isEmojiSelected,
@@ -73,6 +110,8 @@ struct HomeView: View {
                             animatingEmojiScale = CGFloat.zero
                         }
                     }
+                
+                // MARK: - Toast message
                 VStack {
                     Spacer()
                     ToastMessageView()
@@ -91,7 +130,10 @@ struct HomeView: View {
                 }
             }
         }
-        .ignoresSafeArea()
+        .sheet(isPresented: $showMessageArchive) {
+            MessageArchiveView(senderUsername: "몬스타엑스최고")
+                .presentationDetents([.medium, .height(CGFloat(600))])
+        }
         .onChange(of: selectedEmoji) { _ in
             isEmojiSelected = true
         }
@@ -108,6 +150,7 @@ struct ProfileInRadarView: View {
     @State private var rotationDegree = Angle.zero
     let radarResourceName: String
     let imageResourceName: String
+    let fandomName: String
     let radarState: RadarState
     var body: some View {
         ZStack {
@@ -121,6 +164,12 @@ struct ProfileInRadarView: View {
                 .opacity(radarState == .active ? 1.0 : 0.0)
             Image(imageResourceName)
                 .offset(y: 3)
+                .overlay(alignment: .bottomTrailing) {
+                    Image(fandomName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 20)
+                }
         }
     }
 }
@@ -134,9 +183,11 @@ struct ToastMessageView: View {
                 .padding(.vertical, 15)
             Spacer()
         }
-        .background(.black)
+        .background(
+            RoundedRectangle(cornerRadius: 4)
+                .foregroundColor(.black)
+        )
         .padding(.horizontal, 35)
         .shadow(color: .black.opacity(0.22), radius: 12)
-        .clipShape(RoundedRectangle(cornerRadius: 4))
     }
 }

@@ -16,6 +16,7 @@
 		AD5523612ABE7BD700136109 /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5523602ABE7BD700136109 /* MyProfileView.swift */; };
 		AD5523642ABE7E2700136109 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5523632ABE7E2700136109 /* Color+Extension.swift */; };
 		ADC1E7392ABE982B00E4A87D /* EmojiSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7382ABE982B00E4A87D /* EmojiSheetView.swift */; };
+		ADC1E73D2ABED49E00E4A87D /* MessageArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E73C2ABED49E00E4A87D /* MessageArchiveView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		AD5523602ABE7BD700136109 /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
 		AD5523632ABE7E2700136109 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		ADC1E7382ABE982B00E4A87D /* EmojiSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSheetView.swift; sourceTree = "<group>"; };
+		ADC1E73C2ABED49E00E4A87D /* MessageArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageArchiveView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				AD55235C2ABE7BAD00136109 /* HomeView.swift */,
+				ADC1E73C2ABED49E00E4A87D /* MessageArchiveView.swift */,
 				ADC1E7382ABE982B00E4A87D /* EmojiSheetView.swift */,
 			);
 			path = HomeScene;
@@ -213,6 +216,7 @@
 				7D3D6CD02ABE7332008C57FA /* ContentView.swift in Sources */,
 				ADC1E7392ABE982B00E4A87D /* EmojiSheetView.swift in Sources */,
 				AD55235F2ABE7BD000136109 /* RankingView.swift in Sources */,
+				ADC1E73D2ABED49E00E4A87D /* MessageArchiveView.swift in Sources */,
 				AD55235D2ABE7BAD00136109 /* HomeView.swift in Sources */,
 				7D3D6CCE2ABE7332008C57FA /* hoxyApp.swift in Sources */,
 			);
