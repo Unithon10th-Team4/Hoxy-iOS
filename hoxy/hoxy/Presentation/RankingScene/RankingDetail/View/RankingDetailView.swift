@@ -46,11 +46,19 @@ struct RankingDetailView: View {
                 }
                 .modifier(RectangleContainerModifier())
                 .overlay(alignment: .top) {
-                    Image(uiImage: UIImage(named: "fandom")!)
-                        .resizable()
-                        .frame(width: 100, height: 100)
-                        .modifier(CircleImageModifier())
-                        .offset(CGSize(width: 0, height: -50))
+                    
+                    AsyncImage(url: URL(string: model.logoImagePath)) { image in
+                        image
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                            .modifier(CircleImageModifier())
+                            .offset(CGSize(width: 0, height: -50))
+                    } placeholder: {
+                        ProgressView()
+                            .frame(width: 100, height: 100)
+                            .modifier(CircleImageModifier())
+                            .offset(CGSize(width: 0, height: -50))
+                    }
                 }
                 
                 // 아티스트 사진
@@ -69,11 +77,18 @@ struct RankingDetailView: View {
                         .frame(width: .infinity, height: 1)
                         .foregroundColor(.black)
                     
-                    Image(uiImage: UIImage(named: "sample_profile1")!)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: .infinity, height: 160)
-                        .modifier(CornerRadiusStyle(radius: 15, corners: [.bottomLeft, .bottomRight]))
+                    AsyncImage(url: URL(string: model.artistImagePath)) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: .infinity, height: 160)
+                            .modifier(CornerRadiusStyle(radius: 15, corners: [.bottomLeft, .bottomRight]))
+                    } placeholder: {
+                        ProgressView()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: .infinity, height: 160)
+                            .modifier(CornerRadiusStyle(radius: 15, corners: [.bottomLeft, .bottomRight]))
+                    }
                 }
                 .modifier(RectangleContainerModifier())
             }

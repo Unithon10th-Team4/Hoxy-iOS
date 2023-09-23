@@ -14,11 +14,20 @@ struct RankingRow: View {
     
     var body: some View {
         HStack {
-            Image(uiImage: UIImage(named: "background")!)
-                .resizable()
-                .modifier(CircleImageModifier())
-                .frame(width: 54, height: 54)
-                .modifier(BottomTrailingBadgeModifier(strokeColor: .clear, text: String(rank)))
+            AsyncImage(url: URL(string: fandom.logoImagePath)) { image in
+                image
+                    .resizable()
+                    .modifier(CircleImageModifier())
+                    .frame(width: 54, height: 54)
+                    .modifier(BottomTrailingBadgeModifier(strokeColor: .clear, text: String(rank)))
+            } placeholder: {
+                ProgressView()
+                    .frame(width: 54, height: 54)
+                    .modifier(CircleImageModifier())
+                    .modifier(BottomTrailingBadgeModifier(strokeColor: .clear, text: String(rank)))
+            }
+
+                
             
             VStack(alignment: .leading) {
                 Text(fandom.fandomName)

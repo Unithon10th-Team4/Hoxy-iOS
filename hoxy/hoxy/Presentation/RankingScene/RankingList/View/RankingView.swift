@@ -78,6 +78,7 @@ struct RankingView: View {
                 }
 
             }
+        .accentColor(.black)
     }
 }
 
