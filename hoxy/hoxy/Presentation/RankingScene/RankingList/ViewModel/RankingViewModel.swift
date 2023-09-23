@@ -28,8 +28,12 @@ extension RankingViewModel {
     private func getFandomList() {
         
         APIService.shared.fanclubRanking { [weak self] responseList in
-            let fandomList = responseList.map {
+            var fandomList = responseList.map {
                 Fandom(id: $0.fanclubID, logoImagePath: $0.logoURL, fandomName: $0.name, artistName: $0.artist, coins: $0.point)
+            }
+            if fandomList.count < 4 {
+                let emptyList = [Fandom].init(repeating: Fandom(id: "", logoImagePath: "", fandomName: "", artistName: "", coins: 0), count: 4 - fandomList.count)
+                fandomList.append(contentsOf: emptyList)
             }
             self?.topFandomList = fandomList
         }
