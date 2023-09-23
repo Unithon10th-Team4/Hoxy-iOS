@@ -12,6 +12,9 @@
 		7D3D6CD22ABE7335008C57FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3D6CD12ABE7335008C57FA /* Assets.xcassets */; };
 		7D3D6CD52ABE7335008C57FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3D6CD42ABE7335008C57FA /* Preview Assets.xcassets */; };
 		7D985E452ABF1C850046805F /* CornerRadiusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D985E442ABF1C850046805F /* CornerRadiusStyle.swift */; };
+		7D985E4C2ABF250A0046805F /* RankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D985E4B2ABF250A0046805F /* RankingViewModel.swift */; };
+		7D985E4E2ABF25A80046805F /* Fandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D985E4D2ABF25A80046805F /* Fandom.swift */; };
+		7D985E502ABF26060046805F /* FandomDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D985E4F2ABF26060046805F /* FandomDetail.swift */; };
 		7DA2851F2ABEA8C300427090 /* CircleImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2851E2ABEA8C300427090 /* CircleImageModifier.swift */; };
 		7DA285212ABEAB0700427090 /* BottomTrailingBadgeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA285202ABEAB0700427090 /* BottomTrailingBadgeModifier.swift */; };
 		7DA285262ABEB43500427090 /* RankingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA285252ABEB43500427090 /* RankingRow.swift */; };
@@ -35,6 +38,9 @@
 		7D3D6CD12ABE7335008C57FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D3D6CD42ABE7335008C57FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7D985E442ABF1C850046805F /* CornerRadiusStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusStyle.swift; sourceTree = "<group>"; };
+		7D985E4B2ABF250A0046805F /* RankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewModel.swift; sourceTree = "<group>"; };
+		7D985E4D2ABF25A80046805F /* Fandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fandom.swift; sourceTree = "<group>"; };
+		7D985E4F2ABF26060046805F /* FandomDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FandomDetail.swift; sourceTree = "<group>"; };
 		7DA2851E2ABEA8C300427090 /* CircleImageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageModifier.swift; sourceTree = "<group>"; };
 		7DA285202ABEAB0700427090 /* BottomTrailingBadgeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTrailingBadgeModifier.swift; sourceTree = "<group>"; };
 		7DA285252ABEB43500427090 /* RankingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingRow.swift; sourceTree = "<group>"; };
@@ -103,11 +109,63 @@
 		7D985E432ABF125E0046805F /* SubView */ = {
 			isa = PBXGroup;
 			children = (
-				7DA285252ABEB43500427090 /* RankingRow.swift */,
 				7DA285322ABEC9CB00427090 /* RankingDetailCoinView.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		7D985E472ABF24A50046805F /* RankingList */ = {
+			isa = PBXGroup;
+			children = (
+				7D985E482ABF24CC0046805F /* View */,
+				7D985E522ABF28F40046805F /* ViewModel */,
+				7D985E512ABF28EC0046805F /* Model */,
+			);
+			path = RankingList;
+			sourceTree = "<group>";
+		};
+		7D985E482ABF24CC0046805F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADC1E7402ABEDABE00E4A87D /* RankingView.swift */,
+				7D985E492ABF24DC0046805F /* SubView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7D985E492ABF24DC0046805F /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				7DA285252ABEB43500427090 /* RankingRow.swift */,
 				7DA285342ABECF0B00427090 /* RankingTopView.swift */,
 			);
 			path = SubView;
+			sourceTree = "<group>";
+		};
+		7D985E4A2ABF24F10046805F /* RankingDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7DA285272ABEBB3900427090 /* RankingDetailView.swift */,
+				7D985E432ABF125E0046805F /* SubView */,
+			);
+			path = RankingDetail;
+			sourceTree = "<group>";
+		};
+		7D985E512ABF28EC0046805F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D985E4D2ABF25A80046805F /* Fandom.swift */,
+				7D985E4F2ABF26060046805F /* FandomDetail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7D985E522ABF28F40046805F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7D985E4B2ABF250A0046805F /* RankingViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		7DA285122ABE764C00427090 /* Application */ = {
@@ -162,9 +220,8 @@
 		7DA285242ABEB40B00427090 /* RankingScene */ = {
 			isa = PBXGroup;
 			children = (
-				ADC1E7402ABEDABE00E4A87D /* RankingView.swift */,
-				7DA285272ABEBB3900427090 /* RankingDetailView.swift */,
-				7D985E432ABF125E0046805F /* SubView */,
+				7D985E472ABF24A50046805F /* RankingList */,
+				7D985E4A2ABF24F10046805F /* RankingDetail */,
 			);
 			path = RankingScene;
 			sourceTree = "<group>";
@@ -285,10 +342,13 @@
 				7DA2852F2ABEC51600427090 /* RectangleContainerModifier.swift in Sources */,
 				7DA285352ABECF0B00427090 /* RankingTopView.swift in Sources */,
 				7D985E452ABF1C850046805F /* CornerRadiusStyle.swift in Sources */,
+				7D985E4C2ABF250A0046805F /* RankingViewModel.swift in Sources */,
 				AD5523642ABE7E2700136109 /* Color+Extension.swift in Sources */,
 				7D3D6CD02ABE7332008C57FA /* ContentView.swift in Sources */,
 				ADC1E7412ABEDABE00E4A87D /* RankingView.swift in Sources */,
 				ADC1E7392ABE982B00E4A87D /* EmojiSheetView.swift in Sources */,
+				7D985E4E2ABF25A80046805F /* Fandom.swift in Sources */,
+				7D985E502ABF26060046805F /* FandomDetail.swift in Sources */,
 				ADC1E73D2ABED49E00E4A87D /* MessageArchiveView.swift in Sources */,
 				7DA285212ABEAB0700427090 /* BottomTrailingBadgeModifier.swift in Sources */,
 				7DA285282ABEBB3900427090 /* RankingDetailView.swift in Sources */,
