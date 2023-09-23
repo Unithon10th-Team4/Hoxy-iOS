@@ -23,7 +23,6 @@ struct ContentView: View {
                     Label("마이", systemImage: "person.fill")
                 }
         }
-        
     }
 }
 

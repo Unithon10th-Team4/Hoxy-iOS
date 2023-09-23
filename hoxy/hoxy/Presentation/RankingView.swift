@@ -9,7 +9,11 @@ import SwiftUI
 
 struct RankingView: View {
     var body: some View {
-        Text("랭킹")
+        ZStack {
+            Color.backgroundColor
+                .ignoresSafeArea()
+            Text("랭킹")
+        }
     }
 }
 

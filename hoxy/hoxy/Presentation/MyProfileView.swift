@@ -9,7 +9,11 @@ import SwiftUI
 
 struct MyProfileView: View {
     var body: some View {
-        Text("마이")
+        ZStack {
+            Color.backgroundColor
+                .ignoresSafeArea()
+            Text("랭킹")
+        }
     }
 }
 
