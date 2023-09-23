@@ -8,11 +8,11 @@
 import Foundation
 
 struct UserProfile {
-    let username: String
-    let profileImagePath: String
+    var username: String
+    var profileImagePath: String
     
-    let fandomImagePath: String
-    let fandomName: String
-    let artistName: String
-    let coins: Int
+    var fandomImagePath: String
+    var fandomName: String
+    var artistName: String
+    var coins: Int
 }
