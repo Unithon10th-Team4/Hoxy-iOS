@@ -11,7 +11,7 @@ class APIService {
     
     static let shared = APIService()
     
-    private func fetchRequest(url: String, retries: Int, onComplete: @escaping (Result<Data, Error>) -> Void) {
+    private func fetchRequest(url: String, onComplete: @escaping (Result<Data, Error>) -> Void) {
         
         guard let Url = URL(string: url) else {
             print("Error: invalid url")
@@ -38,7 +38,18 @@ class APIService {
     }
 }
 
-// MARK: 
 extension APIService {
-    
+    func fanclubRanking(onSuccess: @escaping (([FanclubRankingResponse]) -> Void), onError: ((Error) -> Void)? = nil) {
+        let urlString = "\(baseUrl)fanclubs"
+        print(urlString)
+        self.fetchRequest(url: urlString) { result in
+            switch result {
+            case .success(let data):
+                let response = try! JSONDecoder().decode([FanclubRankingResponse].self, from: data)
+                onSuccess(response)
+            case .failure(let error):
+                onError?(error)
+            }
+        }
+    }
 }
