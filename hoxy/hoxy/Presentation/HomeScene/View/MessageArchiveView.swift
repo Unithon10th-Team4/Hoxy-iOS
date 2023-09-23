@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MessageArchiveView: View {
-    let senderUsername: String
     @ObservedObject private var viewModel = MessageArchiveViewModel()
     var body: some View {
         VStack {
@@ -40,6 +39,6 @@ struct MessageArchiveView: View {
 
 struct MessageArchiveView_Previews: PreviewProvider {
     static var previews: some View {
-        MessageArchiveView(senderUsername: "몬스타엑스최고")
+        MessageArchiveView()
     }
 }

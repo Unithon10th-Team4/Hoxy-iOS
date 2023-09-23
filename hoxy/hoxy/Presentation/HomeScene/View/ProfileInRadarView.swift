@@ -48,7 +48,9 @@ struct ProfileInRadarView: View {
                     }
             } placeholder: {
                 Image("rader_frame")
-                    .frame(width: 54, height: 54)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 80)
                     .offset(y:5)
                     .overlay(alignment: .center) {
                         ProgressView()
