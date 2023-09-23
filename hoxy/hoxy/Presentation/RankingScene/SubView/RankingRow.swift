@@ -36,13 +36,17 @@ struct RankingRow: View {
             
             Circle()
                 .frame(width: 20, height: 20)
-                .foregroundColor(Color(hex: 0xD9D9D9))
+                .foregroundColor(.clear)
+                .overlay {
+                    Circle()
+                        .stroke(.black, lineWidth: 1)
+                        .frame(width: 20, height: 20)
+                }
                 .overlay(alignment: .center) {
                     Image(systemName: "chevron.right")
                         .resizable()
                         .frame(width: 4.57, height: 9.14)
                         .foregroundColor(Color(hex: 0x999999))
-                        
                 }
         }
         .padding()
@@ -52,6 +56,5 @@ struct RankingRow: View {
 struct RankingRow_Previews: PreviewProvider {
     static var previews: some View {
         RankingRow(uiImage: UIImage(named: "background")!, rank: 3, fandomName: "엑소엘", artistName: "엑소", coins: 1235)
-            .background(Color(hex: 0xF3F4F6))
     }
 }
