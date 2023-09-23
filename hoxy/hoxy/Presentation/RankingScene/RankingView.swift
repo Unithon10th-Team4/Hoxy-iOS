@@ -14,7 +14,8 @@ struct RankingView: View {
     var body: some View {
         
         ZStack {
-            Color.white
+            Image("bg_yellow")
+                .resizable()
                 .ignoresSafeArea()
             
             NavigationView {
