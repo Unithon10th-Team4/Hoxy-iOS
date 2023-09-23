@@ -43,6 +43,7 @@
 		ADC1E7562ABF124800E4A87D /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7552ABF124800E4A87D /* OnboardingViewModel.swift */; };
 		ADC1E75F2ABF6F8300E4A87D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E75E2ABF6F8300E4A87D /* HomeViewModel.swift */; };
 		ADC1E7612ABF6F8E00E4A87D /* MessageArchiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7602ABF6F8E00E4A87D /* MessageArchiveViewModel.swift */; };
+		ADC1E76E2ABF83F000E4A87D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E76D2ABF83F000E4A87D /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		ADC1E7552ABF124800E4A87D /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		ADC1E75E2ABF6F8300E4A87D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		ADC1E7602ABF6F8E00E4A87D /* MessageArchiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageArchiveViewModel.swift; sourceTree = "<group>"; };
+		ADC1E76D2ABF83F000E4A87D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				ADC1E7482ABEFB5700E4A87D /* User.swift */,
+				ADC1E76D2ABF83F000E4A87D /* Message.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				7D985E452ABF1C850046805F /* CornerRadiusStyle.swift in Sources */,
 				7D985E4C2ABF250A0046805F /* RankingViewModel.swift in Sources */,
 				AD5523642ABE7E2700136109 /* Color+Extension.swift in Sources */,
+				ADC1E76E2ABF83F000E4A87D /* Message.swift in Sources */,
 				ADC1E75F2ABF6F8300E4A87D /* HomeViewModel.swift in Sources */,
 				7D3D6CD02ABE7332008C57FA /* ContentView.swift in Sources */,
 				ADC1E7612ABF6F8E00E4A87D /* MessageArchiveViewModel.swift in Sources */,
