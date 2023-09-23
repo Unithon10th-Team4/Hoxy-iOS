@@ -30,7 +30,8 @@ struct HomeView: View {
     
     @ObservedObject private var viewModel = HomeViewModel()
     let nearFansOffset = [(80, -200), (-60, -220), (-20, 100), (100, 280)]
-    @State private var opacityNearFans = Array(repeating: CGFloat.zero, count: 4)
+    @State private var opacityNearFans = Array(repeating: CGFloat(1.0), count: 4)
+    let nearFansImage = ["https://plowithmebucket.s3.ap-northeast-2.amazonaws.com/8679704b-aae0-4990-b05b-0bf2459e6fd9aespa.png"]
     var body: some View {
         ZStack {
             Image("background")
@@ -44,11 +45,11 @@ struct HomeView: View {
                 radarState: .active
             )
             
-            ForEach(viewModel.nearbyUsers.enumerated()) { (index, user) in
+            ForEach(0..<viewModel.nearbyUsersUrl.count) { index in
                 ProfileInRadarView(
                     radarResourceName: "anotherRadar",
                     // TODO: - 주변 사람 데이터
-                    imageResourceUrl: user.profileImageUrl,
+                    imageResourceUrl: viewModel.nearbyUsersUrl[index],
                     fandomImageName: "fandom",
                     radarState: showEmojiSheet[index] ? .active : .inactive
                 )
@@ -153,6 +154,9 @@ struct HomeView: View {
                     }
                 }
             }
+        }
+        .onAppear {
+            viewModel.fetchNearbyUser()
         }
         .sheet(isPresented: $showMessageArchive) {
             MessageArchiveView()

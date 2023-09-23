@@ -57,6 +57,8 @@ struct SettingFandomView: View {
                             username: username,
                             profileImageData: data,
                             artist: selectedArtist ?? "lesserafim")
+                        
+                        
                     }
                 } label: {
                     HStack {

@@ -22,39 +22,34 @@ struct MyProfileView: View {
                 VStack(alignment: .leading, spacing: 15) {
                     Spacer().frame(height: 64)
                     
-                    NavigationLink {
-                        
-                    } label: {
-                        HStack (alignment: .center) {
-                            VStack(alignment: .leading) {
-                                HStack {
-                                    Text(viewModel.userProfile.username)
-                                        .font(.title)
-                                        .fontWeight(.semibold)
-                                    Text("님,")
-                                        .font(.title)
-                                }
-                                Text("안녕하세요!")
+                    HStack (alignment: .center) {
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text(viewModel.userProfile.username)
+                                    .font(.title)
+                                    .fontWeight(.semibold)
+                                Text("님,")
                                     .font(.title)
                             }
-                            
-                            Spacer()
-                            
-                            AsyncImage(url: URL(string: viewModel.userProfile.profileImagePath)) { image in
-                                image
-                                    .resizable()
-                                    .scaledToFill()
-                                    .modifier(CircleImageModifier())
-                                    .frame(width: 64, height: 64)
-                            } placeholder: {
-                                ProgressView()
-                                    .modifier(CircleImageModifier())
-                                    .frame(width: 64, height: 64)
-                            }
+                            Text("안녕하세요!")
+                                .font(.title)
+                        }
+                        
+                        Spacer()
+                        
+                        AsyncImage(url: URL(string: viewModel.userProfile.profileImagePath)) { image in
+                            image
+                                .resizable()
+                                .scaledToFill()
+                                .modifier(CircleImageModifier())
+                                .frame(width: 64, height: 64)
+                        } placeholder: {
+                            ProgressView()
+                                .modifier(CircleImageModifier())
+                                .frame(width: 64, height: 64)
+                        }
 
-                        } //end
-
-                    }
+                    } //end
                     
                     Spacer().frame(height: 64)
                     
