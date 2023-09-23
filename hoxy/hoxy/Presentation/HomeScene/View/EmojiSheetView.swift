@@ -23,6 +23,7 @@ struct EmojiSheetView: View {
             if let _ = selectedEmoji {
                 Text("이미 보낸 사용자에요!")
                     .foregroundColor(.white)
+                    .font(.subheadline)
             } else {
                 ForEach(emojis, id: \.self) { emoji in
                     Image(emoji.rawValue)
