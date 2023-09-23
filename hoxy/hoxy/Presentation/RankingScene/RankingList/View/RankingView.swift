@@ -26,6 +26,7 @@ struct RankingView: View {
                         VStack(alignment: .leading, spacing: 10) {
                             Text("오늘의 TOP 팬덤")
                                 .font(.title)
+                                .fontWeight(.semibold)
                             Text("\(viewModel.dateDescription) 누적된 코인으로 업데이트 되었습니다.")
                                 .font(.body)
                         }
@@ -60,17 +61,16 @@ struct RankingView: View {
                         }.padding()
                         
                         // 4위 ~ 리스트
-                        List(items[3...], id: \.self) { item in
+                        List(Array(viewModel.topFandomList[3...].enumerated()), id:\.element.id) { index, fandom in
                             
-                            let image = UIImage(named: "background")!
                             ZStack(alignment: .leading) {
                                 NavigationLink {
-                                    RankingDetailView(fandomName: item, coins: 32, artistName: item)
+                                    RankingDetailView(fandomName: fandom.fandomName, coins: 32, artistName: fandom.artistName)
                                 } label: {
                                     EmptyView()
                                 }.opacity(0)
                                 
-                                RankingRow(fandom: Fandom(id: "dd", logoImagePath: "dd", fandomName: item, artistName: "몬스터엑스", coins: 3413), rank: 3)
+                                RankingRow(fandom: fandom, rank: index + 4)
                             }
                         }
                         .listStyle(.plain)
