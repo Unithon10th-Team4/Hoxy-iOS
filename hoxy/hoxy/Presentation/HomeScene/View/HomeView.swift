@@ -47,7 +47,7 @@ struct HomeView: View {
             )
             .overlay {
                 EmojiSheetView(selectedEmoji: $selectedEmoji)
-                    .offset(y: 70)
+                    .offset(y: 80)
                     .opacity(showEmojiSheet ? 1.0 : 0.0)
             }
             .onTapGesture {
@@ -101,16 +101,13 @@ struct HomeView: View {
                         .opacity(animatingEmojiOpacity)
                         .shadow(radius: 4)
                         .onAppear {
-                            withAnimation(.linear(duration: 1.0)) {
+                            withAnimation(.linear(duration: 0.3)) {
                                 animatingEmojiScale = CGFloat(0.5)
                             }
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                withAnimation(.linear(duration: 1.0)) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                withAnimation(.linear(duration: 0.15)) {
                                     animatingEmojiOpacity = Double.zero
                                 }
-                            }
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                                animatingEmojiScale = CGFloat.zero
                             }
                         }
                 }
