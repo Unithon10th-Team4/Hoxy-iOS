@@ -15,6 +15,7 @@
 		AD55235F2ABE7BD000136109 /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD55235E2ABE7BD000136109 /* RankingView.swift */; };
 		AD5523612ABE7BD700136109 /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5523602ABE7BD700136109 /* MyProfileView.swift */; };
 		AD5523642ABE7E2700136109 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5523632ABE7E2700136109 /* Color+Extension.swift */; };
+		ADC1E7392ABE982B00E4A87D /* EmojiSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7382ABE982B00E4A87D /* EmojiSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		AD55235E2ABE7BD000136109 /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
 		AD5523602ABE7BD700136109 /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
 		AD5523632ABE7E2700136109 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		ADC1E7382ABE982B00E4A87D /* EmojiSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				AD5523622ABE7E1900136109 /* Extensions */,
-				AD55235C2ABE7BAD00136109 /* HomeView.swift */,
+				ADC1E7372ABE97AB00E4A87D /* HomeScene */,
 				AD55235E2ABE7BD000136109 /* RankingView.swift */,
 				AD5523602ABE7BD700136109 /* MyProfileView.swift */,
 			);
@@ -125,6 +127,15 @@
 				AD5523632ABE7E2700136109 /* Color+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ADC1E7372ABE97AB00E4A87D /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				AD55235C2ABE7BAD00136109 /* HomeView.swift */,
+				ADC1E7382ABE982B00E4A87D /* EmojiSheetView.swift */,
+			);
+			path = HomeScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 				AD5523612ABE7BD700136109 /* MyProfileView.swift in Sources */,
 				AD5523642ABE7E2700136109 /* Color+Extension.swift in Sources */,
 				7D3D6CD02ABE7332008C57FA /* ContentView.swift in Sources */,
+				ADC1E7392ABE982B00E4A87D /* EmojiSheetView.swift in Sources */,
 				AD55235F2ABE7BD000136109 /* RankingView.swift in Sources */,
 				AD55235D2ABE7BAD00136109 /* HomeView.swift in Sources */,
 				7D3D6CCE2ABE7332008C57FA /* hoxyApp.swift in Sources */,
