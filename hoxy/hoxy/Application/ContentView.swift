@@ -8,20 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    init() {
+        UITabBar.appearance().backgroundColor = .white
+    }
+    @EnvironmentObject var viewModel: UserViewModel
     var body: some View {
         TabView {
             HomeView()
                 .tabItem {
-                    Label("탐색", systemImage: "house.fill")
+                    Label(
+                        "탐색",
+                        systemImage: "house.fill")
                 }
             RankingView()
                 .tabItem {
-                    Label("랭킹", systemImage: "star.fill")
+                    Label(
+                        "랭킹",
+                        systemImage: "star.fill")
                 }
             MyProfileView()
                 .tabItem {
-                    Label("마이", systemImage: "person.fill")
+                    Label(
+                        "마이",
+                        systemImage: "person.fill")
                 }
+        }
+        .accentColor(.black)
+        .fullScreenCover(isPresented: .constant(viewModel.currentUser == nil)) {
+            OnboardingView()
         }
     }
 }
