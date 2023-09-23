@@ -22,7 +22,7 @@ struct HomeView: View {
     @State private var animatingEmojiOpacity = 1.0
     
     // Properties for toast message
-    @State private var toastingMessageOpacity = 1.0
+    @State private var toastingMessageOpacity = CGFloat.zero
     @State private var toastMessageY = CGFloat(-20)
     
     // Properties for message modal
@@ -53,6 +53,9 @@ struct HomeView: View {
             .onTapGesture {
                 showEmojiSheet.toggle()
             }
+            .onChange(of: selectedEmoji, perform: { newValue in
+                showEmojiSheet = false
+            })
             .offset(x: 80, y: -200)
             
             // MARK: - Message Button
@@ -119,11 +122,15 @@ struct HomeView: View {
                 }
                 .opacity(toastingMessageOpacity)
                 .onAppear {
-                    withAnimation(.linear(duration: 0.5)) {
-                        toastMessageY = CGFloat(-80)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        withAnimation(.linear(duration: 0.5)) {
+                            toastMessageY = CGFloat(-80)
+                            toastingMessageOpacity = 1.0
+                        }
                     }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                         withAnimation(.linear(duration: 1.0)) {
+                            toastMessageY = CGFloat(-20)
                             toastingMessageOpacity = CGFloat.zero
                         }
                     }
