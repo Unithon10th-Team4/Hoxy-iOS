@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RankingView: View {
     
-    let items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]
+    let items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]
     
     var body: some View {
         
@@ -55,9 +55,9 @@ struct RankingView: View {
                 }.padding()
                 
                 // 4위 ~ 리스트
-                List(items, id: \.self) { item in
-                    Text(item)
-                        .frame(minHeight: 100)
+                List(items[3...], id: \.self) { item in
+                    let image = UIImage(named: "background")!
+                    RankingRow(uiImage: image, rank: 2, fandomName: item, artistName: "엑소", coins: 1234)
                 }.listStyle(.plain)
             }
 
