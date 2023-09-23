@@ -36,7 +36,8 @@ struct RankingView: View {
                             NavigationLink {
                                 RankingDetailView(fandomName: "유애나", coins: 2314, artistName: "아이유")
                             } label: {
-                                RankingTopView(logoImage: UIImage(named: "background")!, rank: 2, fandomName: "유애나", coins: 2314)
+                                let fandom = Fandom(id: "dd", logoImagePath: "dd", fandomName: "유애나", artistName: "아이유", coins: 2314)
+                                RankingTopView(fandom: fandom, rank: 2)
                             }
                             
                             Spacer()
@@ -44,7 +45,9 @@ struct RankingView: View {
                             NavigationLink {
                                 RankingDetailView(fandomName: "아미", coins: 2314, artistName: "방탄소년단")
                             } label: {
-                                RankingTopView(logoImage: UIImage(named: "background")!, rank: 1, fandomName: "아미", coins: 2314)
+                                let fandom = Fandom(id: "dd", logoImagePath: "dd", fandomName: "아미", artistName: "방탄소년단", coins: 2314)
+                                RankingTopView(fandom: fandom, rank: 1)
+
                             }
 
                             Spacer()
@@ -52,7 +55,9 @@ struct RankingView: View {
                             NavigationLink {
                                 RankingDetailView(fandomName: "몬베베", coins: 2314, artistName: "몬스타엑스")
                             } label: {
-                                RankingTopView(logoImage: UIImage(named: "background")!, rank: 3, fandomName: "몬베베", coins: 2314)
+                                let fandom = Fandom(id: "dd", logoImagePath: "dd", fandomName: "몬베베", artistName: "몬스터엑스", coins: 2314)
+                                RankingTopView(fandom: fandom, rank: 3)
+
                             }
 
                             Spacer()

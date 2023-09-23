@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct RankingTopView: View {
-    
-    let logoImage: UIImage
+
+    let fandom: Fandom
     let rank: Int
-    let fandomName: String
-    let coins: Int
     
     var body: some View {
         VStack {
@@ -22,12 +20,12 @@ struct RankingTopView: View {
                 .frame(width: (rank == 1 ? 100 : 80), height: (rank == 1 ? 100 : 80))
             .modifier(BottomTrailingBadgeModifier(text: String(rank)))
             
-            Text(fandomName)
+            Text(fandom.fandomName)
                 .font((rank == 1 ? .title2 : .body))
                 .fontWeight(.semibold)
                 .foregroundColor(.black)
             
-            Text("\(coins) 코인")
+            Text("\(fandom.coins) 코인")
                 .font(.headline)
                 .foregroundColor(.gray)
         }
@@ -37,6 +35,6 @@ struct RankingTopView: View {
 
 struct RankingTopView_Previews: PreviewProvider {
     static var previews: some View {
-        RankingTopView(logoImage: UIImage(named: "background")!, rank: 1, fandomName: "몬베베", coins: 1534)
+        RankingTopView(fandom: Fandom(id: "dd", logoImagePath: "dd", fandomName: "몬베베", artistName: "몬스터엑스", coins: 1342), rank: 1)
     }
 }
