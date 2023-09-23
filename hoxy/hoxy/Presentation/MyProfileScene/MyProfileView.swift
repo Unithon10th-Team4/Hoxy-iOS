@@ -9,13 +9,7 @@ import SwiftUI
 
 struct MyProfileView: View {
     
-    let username: String
-    let profileImage: UIImage
-    
-    let fandomImage: UIImage
-    let fandomName: String
-    let artistName: String
-    let coins: Int
+    @ObservedObject var viewModel = MyProfileViewModel()
     
     var body: some View {
         ZStack {
@@ -30,7 +24,7 @@ struct MyProfileView: View {
                 HStack (alignment: .center) {
                     VStack(alignment: .leading) {
                         HStack {
-                            Text(username)
+                            Text(viewModel.userProfile.username)
                                 .font(.title)
                                 .fontWeight(.semibold)
                             Text("님,")
@@ -42,26 +36,41 @@ struct MyProfileView: View {
                     
                     Spacer()
                     
-                    Image(uiImage: profileImage)
-                        .resizable()
-                        .modifier(CircleImageModifier())
-                        .frame(width: 64, height: 64)
+                    AsyncImage(url: URL(string: viewModel.userProfile.profileImagePath)) { image in
+                        image
+                            .resizable()
+                            .scaledToFill()
+                            .modifier(CircleImageModifier())
+                            .frame(width: 64, height: 64)
+                    } placeholder: {
+                        ProgressView()
+                            .modifier(CircleImageModifier())
+                            .frame(width: 64, height: 64)
+                    }
+
                 }
                 
                 Spacer().frame(height: 64)
                 
                 // 팬덤 정보
                 HStack(spacing: 10) {
-                    Image(uiImage: fandomImage)
-                        .resizable()
-                        .frame(width: 54, height: 54)
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                    
+                    AsyncImage(url: URL(string: viewModel.userProfile.fandomImagePath)) { image in
+                        image
+                            .resizable()
+                            .frame(width: 54, height: 54)
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                    } placeholder: {
+                        ProgressView()
+                            .frame(width: 54, height: 54)
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                    }
                     
                     VStack(alignment: .leading) {
-                        Text(fandomName)
+                        Text(viewModel.userProfile.fandomName)
                             .font(.title3)
                             .fontWeight(.bold)
-                        Text("아티스트 | \(artistName)")
+                        Text("아티스트 | \(viewModel.userProfile.artistName)")
                             .font(.body)
                             .foregroundColor(.gray)
                     }
@@ -89,7 +98,7 @@ struct MyProfileView: View {
                         
                         Spacer()
                         
-                        Text("\(coins) C")
+                        Text("\(viewModel.userProfile.coins) C")
                             .font(.title2)
                             .fontWeight(.semibold)
                             .padding()
@@ -131,11 +140,6 @@ struct MyProfileView: View {
 
 struct MyProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        MyProfileView(username: "몬스터엑스최고",
-                      profileImage: UIImage(named: "myImage")!,
-                      fandomImage: UIImage(named: "fandom")!,
-                      fandomName: "몬베베",
-                      artistName: "몬스터엑스",
-                      coins: 1234)
+        MyProfileView()
     }
 }
