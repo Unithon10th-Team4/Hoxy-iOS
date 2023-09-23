@@ -18,10 +18,12 @@
 		7DA2852F2ABEC51600427090 /* RectangleContainerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2852E2ABEC51600427090 /* RectangleContainerModifier.swift */; };
 		7DA285332ABEC9CB00427090 /* RankingDetailCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA285322ABEC9CB00427090 /* RankingDetailCoinView.swift */; };
 		7DA285352ABECF0B00427090 /* RankingTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA285342ABECF0B00427090 /* RankingTopView.swift */; };
-		AD55235D2ABE7BAD00136109 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD55235C2ABE7BAD00136109 /* HomeView.swift */; };
-		AD55235F2ABE7BD000136109 /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD55235E2ABE7BD000136109 /* RankingView.swift */; };
 		AD5523612ABE7BD700136109 /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5523602ABE7BD700136109 /* MyProfileView.swift */; };
 		AD5523642ABE7E2700136109 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5523632ABE7E2700136109 /* Color+Extension.swift */; };
+		ADC1E7392ABE982B00E4A87D /* EmojiSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7382ABE982B00E4A87D /* EmojiSheetView.swift */; };
+		ADC1E73D2ABED49E00E4A87D /* MessageArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E73C2ABED49E00E4A87D /* MessageArchiveView.swift */; };
+		ADC1E73F2ABEDAA500E4A87D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E73E2ABEDAA500E4A87D /* HomeView.swift */; };
+		ADC1E7412ABEDABE00E4A87D /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7402ABEDABE00E4A87D /* RankingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,10 +39,12 @@
 		7DA2852E2ABEC51600427090 /* RectangleContainerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleContainerModifier.swift; sourceTree = "<group>"; };
 		7DA285322ABEC9CB00427090 /* RankingDetailCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDetailCoinView.swift; sourceTree = "<group>"; };
 		7DA285342ABECF0B00427090 /* RankingTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTopView.swift; sourceTree = "<group>"; };
-		AD55235C2ABE7BAD00136109 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		AD55235E2ABE7BD000136109 /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
 		AD5523602ABE7BD700136109 /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
 		AD5523632ABE7E2700136109 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		ADC1E7382ABE982B00E4A87D /* EmojiSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSheetView.swift; sourceTree = "<group>"; };
+		ADC1E73C2ABED49E00E4A87D /* MessageArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageArchiveView.swift; sourceTree = "<group>"; };
+		ADC1E73E2ABEDAA500E4A87D /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		ADC1E7402ABEDABE00E4A87D /* RankingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +147,7 @@
 		7DA285242ABEB40B00427090 /* ReankingScene */ = {
 			isa = PBXGroup;
 			children = (
-				AD55235E2ABE7BD000136109 /* RankingView.swift */,
+				ADC1E7402ABEDABE00E4A87D /* RankingView.swift */,
 				7DA285272ABEBB3900427090 /* RankingDetailView.swift */,
 				7DA285252ABEB43500427090 /* RankingRow.swift */,
 				7DA285322ABEC9CB00427090 /* RankingDetailCoinView.swift */,
@@ -157,7 +161,7 @@
 			children = (
 				7DA285222ABEB3B000427090 /* Common */,
 				AD5523622ABE7E1900136109 /* Extensions */,
-				AD55235C2ABE7BAD00136109 /* HomeView.swift */,
+				ADC1E7372ABE97AB00E4A87D /* HomeScene */,
 				7DA285242ABEB40B00427090 /* ReankingScene */,
 				AD5523602ABE7BD700136109 /* MyProfileView.swift */,
 			);
@@ -170,6 +174,16 @@
 				AD5523632ABE7E2700136109 /* Color+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ADC1E7372ABE97AB00E4A87D /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				ADC1E73E2ABEDAA500E4A87D /* HomeView.swift */,
+				ADC1E73C2ABED49E00E4A87D /* MessageArchiveView.swift */,
+				ADC1E7382ABE982B00E4A87D /* EmojiSheetView.swift */,
+			);
+			path = HomeScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,10 +263,12 @@
 				7DA285352ABECF0B00427090 /* RankingTopView.swift in Sources */,
 				AD5523642ABE7E2700136109 /* Color+Extension.swift in Sources */,
 				7D3D6CD02ABE7332008C57FA /* ContentView.swift in Sources */,
-				AD55235F2ABE7BD000136109 /* RankingView.swift in Sources */,
+				ADC1E7412ABEDABE00E4A87D /* RankingView.swift in Sources */,
+				ADC1E7392ABE982B00E4A87D /* EmojiSheetView.swift in Sources */,
+				ADC1E73D2ABED49E00E4A87D /* MessageArchiveView.swift in Sources */,
 				7DA285212ABEAB0700427090 /* BottomTrailingBadgeModifier.swift in Sources */,
-				AD55235D2ABE7BAD00136109 /* HomeView.swift in Sources */,
 				7DA285282ABEBB3900427090 /* RankingDetailView.swift in Sources */,
+				ADC1E73F2ABEDAA500E4A87D /* HomeView.swift in Sources */,
 				7D3D6CCE2ABE7332008C57FA /* hoxyApp.swift in Sources */,
 				7DA285332ABEC9CB00427090 /* RankingDetailCoinView.swift in Sources */,
 			);
