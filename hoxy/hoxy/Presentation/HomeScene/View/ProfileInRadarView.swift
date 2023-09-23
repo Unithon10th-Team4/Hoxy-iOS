@@ -47,8 +47,20 @@ struct ProfileInRadarView: View {
                             .frame(width: 20)
                     }
             } placeholder: {
-                ProgressView()
+                Image("rader_frame")
                     .frame(width: 54, height: 54)
+                    .offset(y:5)
+                    .overlay(alignment: .center) {
+                        ProgressView()
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .frame(width: 60, height: 60)
+                    }
+                    .overlay(alignment: .bottomTrailing) {
+                        Image(fandomImageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 20)
+                    }
             }
         }
     }
@@ -62,6 +74,6 @@ struct ProfileInRadarView_Previews: PreviewProvider {
             fandomImageName: "fandom",
             radarState: .active
         )
-
+        
     }
 }

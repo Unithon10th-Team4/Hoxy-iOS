@@ -22,6 +22,7 @@ extension HomeViewModel {
                                fanclubId: user.fanclubId,
                                profileImageUrl: user.profileImageUrl,
                                point: user.point)
+            print("=== \(self.currentUser)")
         }
     }
     
