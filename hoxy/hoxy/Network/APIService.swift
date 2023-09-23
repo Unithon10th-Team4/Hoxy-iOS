@@ -53,3 +53,20 @@ extension APIService {
         }
     }
 }
+
+// Message Archive
+extension APIService {
+    func receivedMessage(onSuccess: @escaping (([MessageResponse]) -> Void), onError: ((Error) -> Void)? = nil) {
+        let urlString = "\(baseUrl)messages?memberName=test" // TODO: -
+        print(urlString)
+        self.fetchRequest(url: urlString) { result in
+            switch result {
+            case .success(let data):
+                let response = try! JSONDecoder().decode([MessageResponse].self, from: data)
+                onSuccess(response)
+            case .failure(let error):
+                onError?(error)
+            }
+        }
+    }
+}

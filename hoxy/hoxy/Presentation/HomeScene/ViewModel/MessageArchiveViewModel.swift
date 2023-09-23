@@ -8,13 +8,20 @@
 import Foundation
 
 class MessageArchiveViewModel: ObservableObject {
-    @Published var messages = [Message]()
+    @Published var messages = [MessageResponse]()
     
     init() {
-        
+        self.fetchRecievedMessages()
     }
-    
+}
+
+extension MessageArchiveViewModel {
     func fetchRecievedMessages() {
-//    https://211e-2001-2d8-f1a2-5f9a-f4bb-2a2a-3711-91a0.ngrok-free.app/messages?memberName=test
+        APIService.shared.receivedMessage { [weak self] messages in
+            let messageList = messages.map {
+                MessageResponse(sender: $0.sender, contents: $0.contents, timestamp: String($0.timestamp.split(separator: "T")[0]))
+            }
+            self?.messages = messageList
+        }
     }
 }

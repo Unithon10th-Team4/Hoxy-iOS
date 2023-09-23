@@ -13,7 +13,6 @@
 		7D3086C62ABF62E800B52A66 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7D3086C52ABF62E800B52A66 /* FirebaseAnalytics */; };
 		7D3086C82ABF62E800B52A66 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 7D3086C72ABF62E800B52A66 /* FirebaseMessaging */; };
 		7D3A79712ABF804200B27326 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A79702ABF804200B27326 /* APIService.swift */; };
-		7D3A79732ABF80A800B27326 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A79722ABF80A800B27326 /* Key.swift */; };
 		7D3A79752ABF81F000B27326 /* FanclubRankingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A79742ABF81F000B27326 /* FanclubRankingResponse.swift */; };
 		7D3D6CCE2ABE7332008C57FA /* hoxyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D6CCD2ABE7332008C57FA /* hoxyApp.swift */; };
 		7D3D6CD02ABE7332008C57FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D6CCF2ABE7332008C57FA /* ContentView.swift */; };
@@ -46,7 +45,8 @@
 		ADC1E7562ABF124800E4A87D /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7552ABF124800E4A87D /* OnboardingViewModel.swift */; };
 		ADC1E75F2ABF6F8300E4A87D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E75E2ABF6F8300E4A87D /* HomeViewModel.swift */; };
 		ADC1E7612ABF6F8E00E4A87D /* MessageArchiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7602ABF6F8E00E4A87D /* MessageArchiveViewModel.swift */; };
-		ADC1E76E2ABF83F000E4A87D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E76D2ABF83F000E4A87D /* Message.swift */; };
+		ADC1E76E2ABF83F000E4A87D /* MessageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E76D2ABF83F000E4A87D /* MessageResponse.swift */; };
+		ADC1E7702ABF88DE00E4A87D /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E76F2ABF88DE00E4A87D /* Key.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +56,6 @@
 		7D3086C92ABF633900B52A66 /* hoxy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hoxy.entitlements; sourceTree = "<group>"; };
 		7D3086CA2ABF648F00B52A66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7D3A79702ABF804200B27326 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		7D3A79722ABF80A800B27326 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		7D3A79742ABF81F000B27326 /* FanclubRankingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanclubRankingResponse.swift; sourceTree = "<group>"; };
 		7D3D6CCA2ABE7332008C57FA /* hoxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hoxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3D6CCD2ABE7332008C57FA /* hoxyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hoxyApp.swift; sourceTree = "<group>"; };
@@ -90,7 +89,8 @@
 		ADC1E7552ABF124800E4A87D /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		ADC1E75E2ABF6F8300E4A87D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		ADC1E7602ABF6F8E00E4A87D /* MessageArchiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageArchiveViewModel.swift; sourceTree = "<group>"; };
-		ADC1E76D2ABF83F000E4A87D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		ADC1E76D2ABF83F000E4A87D /* MessageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageResponse.swift; sourceTree = "<group>"; };
+		ADC1E76F2ABF88DE00E4A87D /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				7D3A79702ABF804200B27326 /* APIService.swift */,
-				7D3A79722ABF80A800B27326 /* Key.swift */,
+				ADC1E76F2ABF88DE00E4A87D /* Key.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -333,7 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				ADC1E7482ABEFB5700E4A87D /* User.swift */,
-				ADC1E76D2ABF83F000E4A87D /* Message.swift */,
+				ADC1E76D2ABF83F000E4A87D /* MessageResponse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -457,7 +457,6 @@
 			files = (
 				7DA285392ABF090B00427090 /* ProfileInRadarView.swift in Sources */,
 				AD5523612ABE7BD700136109 /* MyProfileView.swift in Sources */,
-				7D3A79732ABF80A800B27326 /* Key.swift in Sources */,
 				ADC1E7562ABF124800E4A87D /* OnboardingViewModel.swift in Sources */,
 				7DA2851F2ABEA8C300427090 /* CircleImageModifier.swift in Sources */,
 				7DA285262ABEB43500427090 /* RankingRow.swift in Sources */,
@@ -469,7 +468,7 @@
 				7D985E452ABF1C850046805F /* CornerRadiusStyle.swift in Sources */,
 				7D985E4C2ABF250A0046805F /* RankingViewModel.swift in Sources */,
 				AD5523642ABE7E2700136109 /* Color+Extension.swift in Sources */,
-				ADC1E76E2ABF83F000E4A87D /* Message.swift in Sources */,
+				ADC1E76E2ABF83F000E4A87D /* MessageResponse.swift in Sources */,
 				ADC1E75F2ABF6F8300E4A87D /* HomeViewModel.swift in Sources */,
 				7D3D6CD02ABE7332008C57FA /* ContentView.swift in Sources */,
 				ADC1E7612ABF6F8E00E4A87D /* MessageArchiveViewModel.swift in Sources */,
@@ -477,6 +476,7 @@
 				ADC1E7392ABE982B00E4A87D /* EmojiSheetView.swift in Sources */,
 				7D985E4E2ABF25A80046805F /* Fandom.swift in Sources */,
 				7D985E502ABF26060046805F /* FandomDetail.swift in Sources */,
+				ADC1E7702ABF88DE00E4A87D /* Key.swift in Sources */,
 				ADC1E73D2ABED49E00E4A87D /* MessageArchiveView.swift in Sources */,
 				7DA285212ABEAB0700427090 /* BottomTrailingBadgeModifier.swift in Sources */,
 				7D3A79712ABF804200B27326 /* APIService.swift in Sources */,
