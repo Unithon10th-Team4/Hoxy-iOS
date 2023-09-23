@@ -12,6 +12,8 @@
 		7D3086BE2ABF5EA900B52A66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D3086BD2ABF5EA900B52A66 /* GoogleService-Info.plist */; };
 		7D3086C62ABF62E800B52A66 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7D3086C52ABF62E800B52A66 /* FirebaseAnalytics */; };
 		7D3086C82ABF62E800B52A66 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 7D3086C72ABF62E800B52A66 /* FirebaseMessaging */; };
+		7D3A79712ABF804200B27326 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A79702ABF804200B27326 /* APIService.swift */; };
+		7D3A79732ABF80A800B27326 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A79722ABF80A800B27326 /* Key.swift */; };
 		7D3D6CCE2ABE7332008C57FA /* hoxyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D6CCD2ABE7332008C57FA /* hoxyApp.swift */; };
 		7D3D6CD02ABE7332008C57FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D6CCF2ABE7332008C57FA /* ContentView.swift */; };
 		7D3D6CD22ABE7335008C57FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3D6CD12ABE7335008C57FA /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		7D3086BD2ABF5EA900B52A66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7D3086C92ABF633900B52A66 /* hoxy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hoxy.entitlements; sourceTree = "<group>"; };
 		7D3086CA2ABF648F00B52A66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7D3A79702ABF804200B27326 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		7D3A79722ABF80A800B27326 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		7D3D6CCA2ABE7332008C57FA /* hoxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hoxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3D6CCD2ABE7332008C57FA /* hoxyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hoxyApp.swift; sourceTree = "<group>"; };
 		7D3D6CCF2ABE7332008C57FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +111,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7D3A796F2ABF7FFB00B27326 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7D3A79702ABF804200B27326 /* APIService.swift */,
+				7D3A79722ABF80A800B27326 /* Key.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		7D3D6CC12ABE7332008C57FA = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +144,7 @@
 				AD55235B2ABE7B9300136109 /* Presentation */,
 				7DA285122ABE764C00427090 /* Application */,
 				7DA285142ABE766000427090 /* Domain */,
-				7DA285132ABE765900427090 /* Network */,
+				7D3A796F2ABF7FFB00B27326 /* Network */,
 				7DA285152ABE766700427090 /* Resource */,
 				7D3D6CD12ABE7335008C57FA /* Assets.xcassets */,
 				7D3086BD2ABF5EA900B52A66 /* GoogleService-Info.plist */,
@@ -216,13 +229,6 @@
 				7D3D6CCF2ABE7332008C57FA /* ContentView.swift */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		7DA285132ABE765900427090 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		7DA285142ABE766000427090 /* Domain */ = {
@@ -445,6 +451,7 @@
 			files = (
 				7DA285392ABF090B00427090 /* ProfileInRadarView.swift in Sources */,
 				AD5523612ABE7BD700136109 /* MyProfileView.swift in Sources */,
+				7D3A79732ABF80A800B27326 /* Key.swift in Sources */,
 				ADC1E7562ABF124800E4A87D /* OnboardingViewModel.swift in Sources */,
 				7DA2851F2ABEA8C300427090 /* CircleImageModifier.swift in Sources */,
 				7DA285262ABEB43500427090 /* RankingRow.swift in Sources */,
@@ -465,6 +472,7 @@
 				7D985E502ABF26060046805F /* FandomDetail.swift in Sources */,
 				ADC1E73D2ABED49E00E4A87D /* MessageArchiveView.swift in Sources */,
 				7DA285212ABEAB0700427090 /* BottomTrailingBadgeModifier.swift in Sources */,
+				7D3A79712ABF804200B27326 /* APIService.swift in Sources */,
 				ADC1E74F2ABF05CB00E4A87D /* SettingFandomView.swift in Sources */,
 				ADC1E74D2ABF034800E4A87D /* OnboardingView.swift in Sources */,
 				7DA285282ABEBB3900427090 /* RankingDetailView.swift in Sources */,
