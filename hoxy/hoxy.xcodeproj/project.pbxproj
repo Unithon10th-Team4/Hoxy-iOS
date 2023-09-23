@@ -98,6 +98,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7D985E432ABF125E0046805F /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				7DA285252ABEB43500427090 /* RankingRow.swift */,
+				7DA285322ABEC9CB00427090 /* RankingDetailCoinView.swift */,
+				7DA285342ABECF0B00427090 /* RankingTopView.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
 		7DA285122ABE764C00427090 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,9 +161,7 @@
 			children = (
 				ADC1E7402ABEDABE00E4A87D /* RankingView.swift */,
 				7DA285272ABEBB3900427090 /* RankingDetailView.swift */,
-				7DA285252ABEB43500427090 /* RankingRow.swift */,
-				7DA285322ABEC9CB00427090 /* RankingDetailCoinView.swift */,
-				7DA285342ABECF0B00427090 /* RankingTopView.swift */,
+				7D985E432ABF125E0046805F /* SubView */,
 			);
 			path = RankingScene;
 			sourceTree = "<group>";
