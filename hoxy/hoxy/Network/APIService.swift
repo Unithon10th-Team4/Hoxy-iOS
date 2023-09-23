@@ -104,6 +104,19 @@ extension APIService {
             }
         }
     }
+    
+    func sendEmojiMessage(onSuccess: @escaping ((User) -> Void), onError: ((Error) -> Void)? = nil) {
+        let urlString = "\(baseUrl)messages" // TODO: -
+        self.fetchRequest(url: urlString) { result in
+            switch result {
+            case .success(let data):
+                let response = try! JSONDecoder().decode(User.self, from: data)
+                onSuccess(response)
+            case .failure(let error):
+                onError?(error)
+            }
+        }
+    }
 }
                 
 // MARK: MyProfileScene

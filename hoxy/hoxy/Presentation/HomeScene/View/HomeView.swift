@@ -30,6 +30,7 @@ struct HomeView: View {
     
     @ObservedObject private var viewModel = HomeViewModel()
     let nearFansOffset = [(80, -200), (-60, -220), (-20, 100), (100, 280)]
+    @State private var opacityNearFans = Array(repeating: CGFloat.zero, count: 4)
     var body: some View {
         ZStack {
             Image("background")
@@ -62,6 +63,12 @@ struct HomeView: View {
                     showEmojiSheet[index] = false
                 })
                 .offset(x: CGFloat(nearFansOffset[index].0), y: CGFloat(nearFansOffset[index].1))
+                .opacity(opacityNearFans[index])
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + index) {
+                        opacityNearFans[index] = 1.0
+                    }
+                }
             }
             
             // MARK: - Message Button
