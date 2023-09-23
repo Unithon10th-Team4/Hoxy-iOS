@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingUsernameView: View {
     @State private var username = ""
+    @State private var invalidCondition = false
     private var isFieldEmpty: Bool {
         username.isEmpty
     }
@@ -16,7 +17,7 @@ struct SettingUsernameView: View {
         ZStack {
             Image("bg_green")
                 .ignoresSafeArea()
-            VStack(spacing: 60) {
+            VStack {
                 Text("닉네임을 설정해 주세요")
                     .font(.title2)
                     .bold()
@@ -32,8 +33,16 @@ struct SettingUsernameView: View {
                                     .stroke(.black, lineWidth: 1)
                             )
                     )
-                    .padding(.horizontal, 35)
-                    .padding(.bottom, 60)
+                    .padding([.top, .horizontal], 35)
+                HStack {
+                    Text("조건에 맞추어 닉네임을 다시 입력해 주세요")
+                        .font(.caption)
+                        .foregroundColor(.red)
+                        .padding(.bottom, 60)
+                    Spacer()
+                }
+                .padding(.leading, 40)
+                .opacity(invalidCondition ? 1.0 : 0.0)
             }
             VStack {
                 Spacer()
@@ -50,16 +59,19 @@ struct SettingUsernameView: View {
                     .background(
                         RoundedRectangle(cornerRadius: 10)
                             .frame(height: 56)
-                            .foregroundColor(isFieldEmpty ? .gray.opacity(0.7) : .black)
+                            .foregroundColor(isFieldEmpty || invalidCondition ? .gray.opacity(0.7) : .black)
                     )
                 }
                 .padding(.bottom, 60)
                 .padding(.horizontal, 28)
-                .disabled(isFieldEmpty)
+                .disabled(isFieldEmpty || invalidCondition)
             }
         }
         .onTapGesture {
             hideKeyboard()
+        }
+        .onChange(of: username) { username in
+            invalidCondition = username.contains(" ") || username.count > 10
         }
     }
 }

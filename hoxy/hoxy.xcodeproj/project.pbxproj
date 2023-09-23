@@ -226,10 +226,8 @@
 		ADC1E7422ABEDFD100E4A87D /* OnboardingScene */ = {
 			isa = PBXGroup;
 			children = (
-				ADC1E74C2ABF034800E4A87D /* OnboardingView.swift */,
-				ADC1E7432ABEE0B300E4A87D /* SettingUsernameView.swift */,
-				ADC1E74A2ABEFDDA00E4A87D /* SettingProfileImageView.swift */,
-				ADC1E74E2ABF05CB00E4A87D /* SettingFandomView.swift */,
+				ADC1E7582ABF496E00E4A87D /* View */,
+				ADC1E7572ABF496900E4A87D /* ViewModel */,
 			);
 			path = OnboardingScene;
 			sourceTree = "<group>";
@@ -259,6 +257,24 @@
 				ADC1E7552ABF124800E4A87D /* UserViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ADC1E7572ABF496900E4A87D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ADC1E7582ABF496E00E4A87D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADC1E74C2ABF034800E4A87D /* OnboardingView.swift */,
+				ADC1E7432ABEE0B300E4A87D /* SettingUsernameView.swift */,
+				ADC1E74A2ABEFDDA00E4A87D /* SettingProfileImageView.swift */,
+				ADC1E74E2ABF05CB00E4A87D /* SettingFandomView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
