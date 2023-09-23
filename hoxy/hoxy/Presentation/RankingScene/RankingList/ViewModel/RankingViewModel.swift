@@ -40,6 +40,8 @@ extension RankingViewModel {
             Fandom(id: "9", logoImagePath: "", fandomName: "몬베베", artistName: "몬스터엑스", coins: 2213),
             Fandom(id: "10", logoImagePath: "", fandomName: "스테이", artistName: "스트레이키즈", coins: 1213)
         ]
+        
+        self.topFandomList = testData
     }
 }
 

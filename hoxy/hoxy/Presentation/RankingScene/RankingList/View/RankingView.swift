@@ -10,6 +10,7 @@ import SwiftUI
 struct RankingView: View {
     
     let items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]
+    @ObservedObject var viewModel = RankingViewModel()
     
     var body: some View {
         
@@ -25,7 +26,7 @@ struct RankingView: View {
                         VStack(alignment: .leading, spacing: 10) {
                             Text("오늘의 TOP 팬덤")
                                 .font(.title)
-                            Text("9월 23일 오전 7시까지 누적된 코인으로 업데이트 되었습니다.")
+                            Text("\(viewModel.dateDescription) 누적된 코인으로 업데이트 되었습니다.")
                                 .font(.body)
                         }
                         .padding()
@@ -36,8 +37,7 @@ struct RankingView: View {
                             NavigationLink {
                                 RankingDetailView(fandomName: "유애나", coins: 2314, artistName: "아이유")
                             } label: {
-                                let fandom = Fandom(id: "dd", logoImagePath: "dd", fandomName: "유애나", artistName: "아이유", coins: 2314)
-                                RankingTopView(fandom: fandom, rank: 2)
+                                RankingTopView(fandom: viewModel.topFandomList[1], rank: 2)
                             }
                             
                             Spacer()
@@ -45,9 +45,7 @@ struct RankingView: View {
                             NavigationLink {
                                 RankingDetailView(fandomName: "아미", coins: 2314, artistName: "방탄소년단")
                             } label: {
-                                let fandom = Fandom(id: "dd", logoImagePath: "dd", fandomName: "아미", artistName: "방탄소년단", coins: 2314)
-                                RankingTopView(fandom: fandom, rank: 1)
-
+                                RankingTopView(fandom: viewModel.topFandomList[0], rank: 1)
                             }
 
                             Spacer()
@@ -55,9 +53,7 @@ struct RankingView: View {
                             NavigationLink {
                                 RankingDetailView(fandomName: "몬베베", coins: 2314, artistName: "몬스타엑스")
                             } label: {
-                                let fandom = Fandom(id: "dd", logoImagePath: "dd", fandomName: "몬베베", artistName: "몬스터엑스", coins: 2314)
-                                RankingTopView(fandom: fandom, rank: 3)
-
+                                RankingTopView(fandom: viewModel.topFandomList[2], rank: 3)
                             }
 
                             Spacer()
