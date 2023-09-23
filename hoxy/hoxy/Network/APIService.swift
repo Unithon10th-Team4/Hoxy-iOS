@@ -72,3 +72,23 @@ extension APIService {
         }
     }
 }
+
+// MARK: MyProfileScene
+extension APIService {
+    func myProfile(onSuccess: @escaping ((UserProfileResponse) -> Void), onError: ((Error?) -> Void)? = nil) {
+        
+        let username = UserViewModel.shared.currentUser?.name ?? "test"
+        let urlString = "\(baseUrl)members/\(username)"
+        print(urlString)
+        
+        self.fetchRequest(url: urlString) { result in
+            switch result {
+            case .success(let data):
+                let response = try! JSONDecoder().decode(UserProfileResponse.self, from: data)
+                onSuccess(response)
+            case .failure(let error):
+                onError?(error)
+            }
+        }
+    }
+}
