@@ -9,13 +9,7 @@ import SwiftUI
 
 struct RankingDetailView: View {
     
-    // TODO: ViewModel 생성 후 수정
-    let logoImage: UIImage = UIImage(named: "fandom")!
-    let fandomName: String
-    let fandomDescription: String = "공식 팬클럽"
-    let coins: Int
-    let artistName: String
-    let artistImage: UIImage = UIImage(named: "sample_profile1")!
+    let model: FandomDetail
     
     var body: some View {
         ZStack {
@@ -32,18 +26,18 @@ struct RankingDetailView: View {
                         Spacer()
                             .frame(height: 60)
                         
-                        Text("팬덤 \(fandomName)")
+                        Text("팬덤 \(model.fandomName)")
                             .font(.title)
                             .fontWeight(.bold)
                         
-                        Text(fandomDescription)
+                        Text(model.fandomDescription)
                             .font(.body)
                             .foregroundColor(.gray)
                         
                         Spacer()
                             .frame(height: 10)
                         
-                        RankingDetailCoinView(coins: coins)
+                        RankingDetailCoinView(coins: model.coins)
                         
                         Spacer()
                             .frame(height: 30)
@@ -52,11 +46,19 @@ struct RankingDetailView: View {
                 }
                 .modifier(RectangleContainerModifier())
                 .overlay(alignment: .top) {
-                    Image(uiImage: logoImage)
-                        .resizable()
-                        .frame(width: 100, height: 100)
-                        .modifier(CircleImageModifier())
-                        .offset(CGSize(width: 0, height: -50))
+                    
+                    AsyncImage(url: URL(string: model.logoImagePath)) { image in
+                        image
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                            .modifier(CircleImageModifier())
+                            .offset(CGSize(width: 0, height: -50))
+                    } placeholder: {
+                        ProgressView()
+                            .frame(width: 100, height: 100)
+                            .modifier(CircleImageModifier())
+                            .offset(CGSize(width: 0, height: -50))
+                    }
                 }
                 
                 // 아티스트 사진
@@ -65,7 +67,7 @@ struct RankingDetailView: View {
                         Text("아티스트")
                             .font(.headline)
                             
-                        Text(artistName)
+                        Text(model.artistName)
                             .font(.headline)
                             .fontWeight(.semibold)
                     }
@@ -75,11 +77,18 @@ struct RankingDetailView: View {
                         .frame(width: .infinity, height: 1)
                         .foregroundColor(.black)
                     
-                    Image(uiImage: artistImage)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: .infinity, height: 160)
-                        .modifier(CornerRadiusStyle(radius: 15, corners: [.bottomLeft, .bottomRight]))
+                    AsyncImage(url: URL(string: model.artistImagePath)) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: .infinity, height: 160)
+                            .modifier(CornerRadiusStyle(radius: 15, corners: [.bottomLeft, .bottomRight]))
+                    } placeholder: {
+                        ProgressView()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: .infinity, height: 160)
+                            .modifier(CornerRadiusStyle(radius: 15, corners: [.bottomLeft, .bottomRight]))
+                    }
                 }
                 .modifier(RectangleContainerModifier())
             }
@@ -90,6 +99,6 @@ struct RankingDetailView: View {
 
 struct RankingDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        RankingDetailView(fandomName: "몬베베", coins: 3125, artistName: "몬스타엑스")
+        RankingDetailView(model: FandomDetail(logoImagePath: "", fandomName: "몬베베", fandomDescription: "공식팬덤", coins: 1234, artistName: "몬스터엑스", artistImagePath: ""))
     }
 }
