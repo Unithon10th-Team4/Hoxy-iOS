@@ -43,11 +43,12 @@ struct HomeView: View {
                 fandomImageName: "fandom",
                 radarState: .active
             )
-            ForEach(0..<4) { index in
+            
+            ForEach(viewModel.nearbyUsers.enumerated()) { (index, user) in
                 ProfileInRadarView(
                     radarResourceName: "anotherRadar",
                     // TODO: - 주변 사람 데이터
-                    imageResourceUrl: viewModel.currentUser?.profileImageUrl ?? "",
+                    imageResourceUrl: user.profileImageUrl,
                     fandomImageName: "fandom",
                     radarState: showEmojiSheet[index] ? .active : .inactive
                 )
@@ -65,7 +66,7 @@ struct HomeView: View {
                 .offset(x: CGFloat(nearFansOffset[index].0), y: CGFloat(nearFansOffset[index].1))
                 .opacity(opacityNearFans[index])
                 .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + index) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + TimeInterval(index)) {
                         opacityNearFans[index] = 1.0
                     }
                 }

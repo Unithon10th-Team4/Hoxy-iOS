@@ -9,9 +9,11 @@ import SwiftUI
 
 class HomeViewModel: ObservableObject {
     @Published var currentUser: User?
+    @Published var nearbyUsers = [NearUserResponse]()
     
     init() {
         self.fetchCurrentUser()
+        self.fetchNearbyUser()
     }
 }
 
@@ -22,7 +24,12 @@ extension HomeViewModel {
                                fanclubId: user.fanclubId,
                                profileImageUrl: user.profileImageUrl,
                                point: user.point)
-            print("=== \(self.currentUser)")
+        }
+    }
+    
+    private func fetchNearbyUser() {
+        APIService.shared.nearbyUser { [weak self] nearUser in
+            self?.nearbyUsers = nearUser
         }
     }
     
