@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct User {
-    let username: String
-    let profileImageData: Data
+    let name: String
+    let profileImage: Data
     let favoriteArtist: String
 }

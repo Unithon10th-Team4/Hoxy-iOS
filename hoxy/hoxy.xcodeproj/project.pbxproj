@@ -32,7 +32,8 @@
 		ADC1E74B2ABEFDDA00E4A87D /* SettingProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E74A2ABEFDDA00E4A87D /* SettingProfileImageView.swift */; };
 		ADC1E74D2ABF034800E4A87D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E74C2ABF034800E4A87D /* OnboardingView.swift */; };
 		ADC1E74F2ABF05CB00E4A87D /* SettingFandomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E74E2ABF05CB00E4A87D /* SettingFandomView.swift */; };
-		ADC1E7562ABF124800E4A87D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7552ABF124800E4A87D /* UserViewModel.swift */; };
+		ADC1E7562ABF124800E4A87D /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7552ABF124800E4A87D /* OnboardingViewModel.swift */; };
+		ADC1E75B2ABF55AA00E4A87D /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = ADC1E75A2ABF55AA00E4A87D /* FirebaseMessaging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,7 +63,7 @@
 		ADC1E74A2ABEFDDA00E4A87D /* SettingProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileImageView.swift; sourceTree = "<group>"; };
 		ADC1E74C2ABF034800E4A87D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		ADC1E74E2ABF05CB00E4A87D /* SettingFandomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFandomView.swift; sourceTree = "<group>"; };
-		ADC1E7552ABF124800E4A87D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		ADC1E7552ABF124800E4A87D /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADC1E75B2ABF55AA00E4A87D /* FirebaseMessaging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +256,6 @@
 		ADC1E7542ABF11ED00E4A87D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				ADC1E7552ABF124800E4A87D /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -262,6 +263,7 @@
 		ADC1E7572ABF496900E4A87D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				ADC1E7552ABF124800E4A87D /* OnboardingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -293,6 +295,9 @@
 			dependencies = (
 			);
 			name = hoxy;
+			packageProductDependencies = (
+				ADC1E75A2ABF55AA00E4A87D /* FirebaseMessaging */,
+			);
 			productName = hoxy;
 			productReference = 7D3D6CCA2ABE7332008C57FA /* hoxy.app */;
 			productType = "com.apple.product-type.application";
@@ -321,6 +326,9 @@
 				Base,
 			);
 			mainGroup = 7D3D6CC12ABE7332008C57FA;
+			packageReferences = (
+				ADC1E7592ABF55AA00E4A87D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 7D3D6CCB2ABE7332008C57FA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -349,7 +357,7 @@
 			files = (
 				7DA285392ABF090B00427090 /* ProfileInRadarView.swift in Sources */,
 				AD5523612ABE7BD700136109 /* MyProfileView.swift in Sources */,
-				ADC1E7562ABF124800E4A87D /* UserViewModel.swift in Sources */,
+				ADC1E7562ABF124800E4A87D /* OnboardingViewModel.swift in Sources */,
 				7DA2851F2ABEA8C300427090 /* CircleImageModifier.swift in Sources */,
 				7DA285262ABEB43500427090 /* RankingRow.swift in Sources */,
 				ADC1E7462ABEF93A00E4A87D /* View+Extension.swift in Sources */,
@@ -499,7 +507,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"hoxy/Preview Content\"";
-				DEVELOPMENT_TEAM = ZW6466CHF4;
+				DEVELOPMENT_TEAM = 7D5PZJWQ9T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -529,7 +537,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"hoxy/Preview Content\"";
-				DEVELOPMENT_TEAM = ZW6466CHF4;
+				DEVELOPMENT_TEAM = 7D5PZJWQ9T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -573,6 +581,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ADC1E7592ABF55AA00E4A87D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ADC1E75A2ABF55AA00E4A87D /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADC1E7592ABF55AA00E4A87D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D3D6CC22ABE7332008C57FA /* Project object */;
 }
