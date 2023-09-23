@@ -16,6 +16,7 @@
 		7D3A79752ABF81F000B27326 /* FanclubRankingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A79742ABF81F000B27326 /* FanclubRankingResponse.swift */; };
 		7D3A79772ABF8AFD00B27326 /* FanclubDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A79762ABF8AFD00B27326 /* FanclubDetailResponse.swift */; };
 		7D3A79792ABF8FFA00B27326 /* UserProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A79782ABF8FFA00B27326 /* UserProfileResponse.swift */; };
+		7D3A797B2ABF9EA200B27326 /* NearUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A797A2ABF9EA200B27326 /* NearUserResponse.swift */; };
 		7D3D6CCE2ABE7332008C57FA /* hoxyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D6CCD2ABE7332008C57FA /* hoxyApp.swift */; };
 		7D3D6CD02ABE7332008C57FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D6CCF2ABE7332008C57FA /* ContentView.swift */; };
 		7D3D6CD22ABE7335008C57FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3D6CD12ABE7335008C57FA /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		7D3A79742ABF81F000B27326 /* FanclubRankingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanclubRankingResponse.swift; sourceTree = "<group>"; };
 		7D3A79762ABF8AFD00B27326 /* FanclubDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanclubDetailResponse.swift; sourceTree = "<group>"; };
 		7D3A79782ABF8FFA00B27326 /* UserProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileResponse.swift; sourceTree = "<group>"; };
+		7D3A797A2ABF9EA200B27326 /* NearUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearUserResponse.swift; sourceTree = "<group>"; };
 		7D3D6CCA2ABE7332008C57FA /* hoxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hoxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3D6CCD2ABE7332008C57FA /* hoxyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hoxyApp.swift; sourceTree = "<group>"; };
 		7D3D6CCF2ABE7332008C57FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				7D3A79742ABF81F000B27326 /* FanclubRankingResponse.swift */,
 				7D3A79762ABF8AFD00B27326 /* FanclubDetailResponse.swift */,
 				7D3A79782ABF8FFA00B27326 /* UserProfileResponse.swift */,
+				7D3A797A2ABF9EA200B27326 /* NearUserResponse.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				7D3A79712ABF804200B27326 /* APIService.swift in Sources */,
 				ADC1E74F2ABF05CB00E4A87D /* SettingFandomView.swift in Sources */,
 				ADC1E74D2ABF034800E4A87D /* OnboardingView.swift in Sources */,
+				7D3A797B2ABF9EA200B27326 /* NearUserResponse.swift in Sources */,
 				7DA285282ABEBB3900427090 /* RankingDetailView.swift in Sources */,
 				7D3086BA2ABF4FCB00B52A66 /* MyProfileViewModel.swift in Sources */,
 				ADC1E73F2ABEDAA500E4A87D /* HomeView.swift in Sources */,
