@@ -12,6 +12,7 @@ struct hoxyApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(UserViewModel.shared)
         }
     }
 }

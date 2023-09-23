@@ -26,6 +26,13 @@
 		ADC1E73D2ABED49E00E4A87D /* MessageArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E73C2ABED49E00E4A87D /* MessageArchiveView.swift */; };
 		ADC1E73F2ABEDAA500E4A87D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E73E2ABEDAA500E4A87D /* HomeView.swift */; };
 		ADC1E7412ABEDABE00E4A87D /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7402ABEDABE00E4A87D /* RankingView.swift */; };
+		ADC1E7442ABEE0B300E4A87D /* SettingUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7432ABEE0B300E4A87D /* SettingUsernameView.swift */; };
+		ADC1E7462ABEF93A00E4A87D /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7452ABEF93A00E4A87D /* View+Extension.swift */; };
+		ADC1E7492ABEFB5700E4A87D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7482ABEFB5700E4A87D /* User.swift */; };
+		ADC1E74B2ABEFDDA00E4A87D /* SettingProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E74A2ABEFDDA00E4A87D /* SettingProfileImageView.swift */; };
+		ADC1E74D2ABF034800E4A87D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E74C2ABF034800E4A87D /* OnboardingView.swift */; };
+		ADC1E74F2ABF05CB00E4A87D /* SettingFandomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E74E2ABF05CB00E4A87D /* SettingFandomView.swift */; };
+		ADC1E7562ABF124800E4A87D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7552ABF124800E4A87D /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +56,13 @@
 		ADC1E73C2ABED49E00E4A87D /* MessageArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageArchiveView.swift; sourceTree = "<group>"; };
 		ADC1E73E2ABEDAA500E4A87D /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		ADC1E7402ABEDABE00E4A87D /* RankingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
+		ADC1E7432ABEE0B300E4A87D /* SettingUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUsernameView.swift; sourceTree = "<group>"; };
+		ADC1E7452ABEF93A00E4A87D /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		ADC1E7482ABEFB5700E4A87D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ADC1E74A2ABEFDDA00E4A87D /* SettingProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileImageView.swift; sourceTree = "<group>"; };
+		ADC1E74C2ABF034800E4A87D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		ADC1E74E2ABF05CB00E4A87D /* SettingFandomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFandomView.swift; sourceTree = "<group>"; };
+		ADC1E7552ABF124800E4A87D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +143,7 @@
 		7DA285142ABE766000427090 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				ADC1E7472ABEFB3800E4A87D /* Entities */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -182,6 +197,7 @@
 			children = (
 				7DA285222ABEB3B000427090 /* Common */,
 				AD5523622ABE7E1900136109 /* Extensions */,
+				ADC1E7422ABEDFD100E4A87D /* OnboardingScene */,
 				ADC1E7372ABE97AB00E4A87D /* HomeScene */,
 				7DA285242ABEB40B00427090 /* RankingScene */,
 				7DA285372ABEEFFC00427090 /* MyProfileScene */,
@@ -193,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				AD5523632ABE7E2700136109 /* Color+Extension.swift */,
+				ADC1E7452ABEF93A00E4A87D /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -200,12 +217,48 @@
 		ADC1E7372ABE97AB00E4A87D /* HomeScene */ = {
 			isa = PBXGroup;
 			children = (
+				ADC1E7532ABF11DF00E4A87D /* View */,
+				ADC1E7542ABF11ED00E4A87D /* ViewModel */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		ADC1E7422ABEDFD100E4A87D /* OnboardingScene */ = {
+			isa = PBXGroup;
+			children = (
+				ADC1E74C2ABF034800E4A87D /* OnboardingView.swift */,
+				ADC1E7432ABEE0B300E4A87D /* SettingUsernameView.swift */,
+				ADC1E74A2ABEFDDA00E4A87D /* SettingProfileImageView.swift */,
+				ADC1E74E2ABF05CB00E4A87D /* SettingFandomView.swift */,
+			);
+			path = OnboardingScene;
+			sourceTree = "<group>";
+		};
+		ADC1E7472ABEFB3800E4A87D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				ADC1E7482ABEFB5700E4A87D /* User.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		ADC1E7532ABF11DF00E4A87D /* View */ = {
+			isa = PBXGroup;
+			children = (
 				ADC1E73E2ABEDAA500E4A87D /* HomeView.swift */,
 				ADC1E73C2ABED49E00E4A87D /* MessageArchiveView.swift */,
 				ADC1E7382ABE982B00E4A87D /* EmojiSheetView.swift */,
 				7DA285382ABF090B00427090 /* ProfileInRadarView.swift */,
 			);
-			path = HomeScene;
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADC1E7542ABF11ED00E4A87D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ADC1E7552ABF124800E4A87D /* UserViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,10 +333,13 @@
 			files = (
 				7DA285392ABF090B00427090 /* ProfileInRadarView.swift in Sources */,
 				AD5523612ABE7BD700136109 /* MyProfileView.swift in Sources */,
+				ADC1E7562ABF124800E4A87D /* UserViewModel.swift in Sources */,
 				7DA2851F2ABEA8C300427090 /* CircleImageModifier.swift in Sources */,
 				7DA285262ABEB43500427090 /* RankingRow.swift in Sources */,
+				ADC1E7462ABEF93A00E4A87D /* View+Extension.swift in Sources */,
 				7DA2852F2ABEC51600427090 /* RectangleContainerModifier.swift in Sources */,
 				7DA285352ABECF0B00427090 /* RankingTopView.swift in Sources */,
+				ADC1E74B2ABEFDDA00E4A87D /* SettingProfileImageView.swift in Sources */,
 				7D985E452ABF1C850046805F /* CornerRadiusStyle.swift in Sources */,
 				AD5523642ABE7E2700136109 /* Color+Extension.swift in Sources */,
 				7D3D6CD02ABE7332008C57FA /* ContentView.swift in Sources */,
@@ -291,8 +347,12 @@
 				ADC1E7392ABE982B00E4A87D /* EmojiSheetView.swift in Sources */,
 				ADC1E73D2ABED49E00E4A87D /* MessageArchiveView.swift in Sources */,
 				7DA285212ABEAB0700427090 /* BottomTrailingBadgeModifier.swift in Sources */,
+				ADC1E74F2ABF05CB00E4A87D /* SettingFandomView.swift in Sources */,
+				ADC1E74D2ABF034800E4A87D /* OnboardingView.swift in Sources */,
 				7DA285282ABEBB3900427090 /* RankingDetailView.swift in Sources */,
 				ADC1E73F2ABEDAA500E4A87D /* HomeView.swift in Sources */,
+				ADC1E7492ABEFB5700E4A87D /* User.swift in Sources */,
+				ADC1E7442ABEE0B300E4A87D /* SettingUsernameView.swift in Sources */,
 				7D3D6CCE2ABE7332008C57FA /* hoxyApp.swift in Sources */,
 				7DA285332ABEC9CB00427090 /* RankingDetailCoinView.swift in Sources */,
 			);
