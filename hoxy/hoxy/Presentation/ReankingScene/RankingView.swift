@@ -33,37 +33,25 @@ struct RankingView: View {
                     HStack {
                         Spacer()
                         NavigationLink {
-                            Text("2위")
+                            RankingDetailView(logoImage: UIImage(named: "background")!, fandomName: "유애나", fandomDescription: "Dscroption", coins: 2314)
                         } label: {
-                            Image(uiImage: UIImage(named: "background")!)
-                                .resizable()
-                                .modifier(CircleImageModifier())
-                                .frame(width: 80, height: 80)
-                                .modifier(BottomTrailingBadgeModifier(text: "2"))
+                            RankingTopView(logoImage: UIImage(named: "background")!, rank: 2, fandomName: "유애나", coins: 2314)
                         }
                         
                         Spacer()
                         
                         NavigationLink {
-                            Text("1위")
+                            RankingDetailView(logoImage: UIImage(named: "background")!, fandomName: "아미", fandomDescription: "Dscroption", coins: 2314)
                         } label: {
-                            Image(uiImage: UIImage(named: "background")!)
-                                .resizable()
-                                .modifier(CircleImageModifier())
-                                .frame(width: 100, height: 100)
-                                .modifier(BottomTrailingBadgeModifier(text: "2"))
+                            RankingTopView(logoImage: UIImage(named: "background")!, rank: 1, fandomName: "아미", coins: 2314)
                         }
 
                         Spacer()
                         
                         NavigationLink {
-                            Text("3위")
+                            RankingDetailView(logoImage: UIImage(named: "background")!, fandomName: "몬베베", fandomDescription: "Dscroption", coins: 2314)
                         } label: {
-                            Image(uiImage: UIImage(named: "background")!)
-                                .resizable()
-                                .modifier(CircleImageModifier())
-                                .frame(width: 80, height: 80)
-                                .modifier(BottomTrailingBadgeModifier(text: "2"))
+                            RankingTopView(logoImage: UIImage(named: "background")!, rank: 3, fandomName: "몬베베", coins: 2314)
                         }
 
                         Spacer()
@@ -75,7 +63,7 @@ struct RankingView: View {
                         let image = UIImage(named: "background")!
                         ZStack(alignment: .leading) {
                             NavigationLink {
-                                Text(item)
+                                RankingDetailView(logoImage: UIImage(named: "background")!, fandomName: item, fandomDescription: "Description", coins: 32)
                             } label: {
                                 EmptyView()
                             }.opacity(0)

@@ -29,6 +29,7 @@ struct RankingRow: View {
                     .fontWeight(.bold)
                 Text("\(artistName) | \(coins) 코인")
                     .font(.body)
+                    .foregroundColor(.gray)
             }
             
             Spacer()

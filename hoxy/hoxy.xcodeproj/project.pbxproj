@@ -17,6 +17,7 @@
 		7DA285282ABEBB3900427090 /* RankingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA285272ABEBB3900427090 /* RankingDetailView.swift */; };
 		7DA2852F2ABEC51600427090 /* RectangleContainerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2852E2ABEC51600427090 /* RectangleContainerModifier.swift */; };
 		7DA285332ABEC9CB00427090 /* RankingDetailCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA285322ABEC9CB00427090 /* RankingDetailCoinView.swift */; };
+		7DA285352ABECF0B00427090 /* RankingTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA285342ABECF0B00427090 /* RankingTopView.swift */; };
 		AD55235D2ABE7BAD00136109 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD55235C2ABE7BAD00136109 /* HomeView.swift */; };
 		AD55235F2ABE7BD000136109 /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD55235E2ABE7BD000136109 /* RankingView.swift */; };
 		AD5523612ABE7BD700136109 /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5523602ABE7BD700136109 /* MyProfileView.swift */; };
@@ -35,6 +36,7 @@
 		7DA285272ABEBB3900427090 /* RankingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDetailView.swift; sourceTree = "<group>"; };
 		7DA2852E2ABEC51600427090 /* RectangleContainerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleContainerModifier.swift; sourceTree = "<group>"; };
 		7DA285322ABEC9CB00427090 /* RankingDetailCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDetailCoinView.swift; sourceTree = "<group>"; };
+		7DA285342ABECF0B00427090 /* RankingTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTopView.swift; sourceTree = "<group>"; };
 		AD55235C2ABE7BAD00136109 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AD55235E2ABE7BD000136109 /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
 		AD5523602ABE7BD700136109 /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				7DA285272ABEBB3900427090 /* RankingDetailView.swift */,
 				7DA285252ABEB43500427090 /* RankingRow.swift */,
 				7DA285322ABEC9CB00427090 /* RankingDetailCoinView.swift */,
+				7DA285342ABECF0B00427090 /* RankingTopView.swift */,
 			);
 			path = ReankingScene;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				7DA2851F2ABEA8C300427090 /* CircleImageModifier.swift in Sources */,
 				7DA285262ABEB43500427090 /* RankingRow.swift in Sources */,
 				7DA2852F2ABEC51600427090 /* RectangleContainerModifier.swift in Sources */,
+				7DA285352ABECF0B00427090 /* RankingTopView.swift in Sources */,
 				AD5523642ABE7E2700136109 /* Color+Extension.swift in Sources */,
 				7D3D6CD02ABE7332008C57FA /* ContentView.swift in Sources */,
 				AD55235F2ABE7BD000136109 /* RankingView.swift in Sources */,
