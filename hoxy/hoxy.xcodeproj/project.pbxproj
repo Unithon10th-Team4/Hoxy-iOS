@@ -14,6 +14,7 @@
 		7D3086C82ABF62E800B52A66 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 7D3086C72ABF62E800B52A66 /* FirebaseMessaging */; };
 		7D3A79712ABF804200B27326 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A79702ABF804200B27326 /* APIService.swift */; };
 		7D3A79752ABF81F000B27326 /* FanclubRankingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A79742ABF81F000B27326 /* FanclubRankingResponse.swift */; };
+		7D3A79772ABF8AFD00B27326 /* FanclubDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A79762ABF8AFD00B27326 /* FanclubDetailResponse.swift */; };
 		7D3D6CCE2ABE7332008C57FA /* hoxyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D6CCD2ABE7332008C57FA /* hoxyApp.swift */; };
 		7D3D6CD02ABE7332008C57FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D6CCF2ABE7332008C57FA /* ContentView.swift */; };
 		7D3D6CD22ABE7335008C57FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3D6CD12ABE7335008C57FA /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		7D3086CA2ABF648F00B52A66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7D3A79702ABF804200B27326 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		7D3A79742ABF81F000B27326 /* FanclubRankingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanclubRankingResponse.swift; sourceTree = "<group>"; };
+		7D3A79762ABF8AFD00B27326 /* FanclubDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanclubDetailResponse.swift; sourceTree = "<group>"; };
 		7D3D6CCA2ABE7332008C57FA /* hoxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hoxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3D6CCD2ABE7332008C57FA /* hoxyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hoxyApp.swift; sourceTree = "<group>"; };
 		7D3D6CCF2ABE7332008C57FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			children = (
 				ADC1E7472ABEFB3800E4A87D /* Entities */,
 				7D3A79742ABF81F000B27326 /* FanclubRankingResponse.swift */,
+				7D3A79762ABF8AFD00B27326 /* FanclubDetailResponse.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				ADC1E7412ABEDABE00E4A87D /* RankingView.swift in Sources */,
 				ADC1E7392ABE982B00E4A87D /* EmojiSheetView.swift in Sources */,
 				7D985E4E2ABF25A80046805F /* Fandom.swift in Sources */,
+				7D3A79772ABF8AFD00B27326 /* FanclubDetailResponse.swift in Sources */,
 				7D985E502ABF26060046805F /* FandomDetail.swift in Sources */,
 				ADC1E7702ABF88DE00E4A87D /* Key.swift in Sources */,
 				ADC1E73D2ABED49E00E4A87D /* MessageArchiveView.swift in Sources */,

@@ -35,7 +35,7 @@ struct RankingView: View {
                         HStack {
                             Spacer()
                             NavigationLink {
-                                RankingDetailView(model: self.viewModel.getFandomDetail(id: viewModel.topFandomList[1].id))
+                                RankingDetailView(model: self.viewModel.getFandomDetail(fandom: viewModel.topFandomList[1]))
                             } label: {
                                 RankingTopView(fandom: viewModel.topFandomList[1], rank: 2)
                             }
@@ -43,7 +43,7 @@ struct RankingView: View {
                             Spacer()
                             
                             NavigationLink {
-                                RankingDetailView(model: self.viewModel.getFandomDetail(id: viewModel.topFandomList[0].id))
+                                RankingDetailView(model: self.viewModel.getFandomDetail(fandom: viewModel.topFandomList[0]))
                             } label: {
                                 RankingTopView(fandom: viewModel.topFandomList[0], rank: 1)
                             }
@@ -51,7 +51,7 @@ struct RankingView: View {
                             Spacer()
                             
                             NavigationLink {
-                                RankingDetailView(model: self.viewModel.getFandomDetail(id: viewModel.topFandomList[2].id))
+                                RankingDetailView(model: self.viewModel.getFandomDetail(fandom: viewModel.topFandomList[2]))
                             } label: {
                                 RankingTopView(fandom: viewModel.topFandomList[2], rank: 3)
                             }
@@ -64,7 +64,7 @@ struct RankingView: View {
                             
                             ZStack(alignment: .leading) {
                                 NavigationLink {
-                                    RankingDetailView(model: self.viewModel.getFandomDetail(id: fandom.id))
+                                    RankingDetailView(model: self.viewModel.getFandomDetail(fandom: fandom))
                                 } label: {
                                     EmptyView()
                                 }.opacity(0)
