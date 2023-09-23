@@ -26,12 +26,7 @@ struct ContentView: View {
                         "랭킹",
                         systemImage: "star.fill")
                 }
-            MyProfileView(username: "몬스터엑스최고",
-                          profileImage: UIImage(named: "sample_profile2")!,
-                          fandomImage: UIImage(named: "fandom")!,
-                          fandomName: "몬베베",
-                          artistName: "몬스터엑스",
-                          coins: 1234)
+            MyProfileView()
                 .tabItem {
                     Label(
                         "마이",

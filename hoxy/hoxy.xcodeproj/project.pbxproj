@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D3086BA2ABF4FCB00B52A66 /* MyProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3086B92ABF4FCB00B52A66 /* MyProfileViewModel.swift */; };
+		7D3086BC2ABF501D00B52A66 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3086BB2ABF501D00B52A66 /* UserProfile.swift */; };
 		7D3D6CCE2ABE7332008C57FA /* hoxyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D6CCD2ABE7332008C57FA /* hoxyApp.swift */; };
 		7D3D6CD02ABE7332008C57FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D6CCF2ABE7332008C57FA /* ContentView.swift */; };
 		7D3D6CD22ABE7335008C57FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3D6CD12ABE7335008C57FA /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D3086B92ABF4FCB00B52A66 /* MyProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewModel.swift; sourceTree = "<group>"; };
+		7D3086BB2ABF501D00B52A66 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		7D3D6CCA2ABE7332008C57FA /* hoxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hoxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3D6CCD2ABE7332008C57FA /* hoxyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hoxyApp.swift; sourceTree = "<group>"; };
 		7D3D6CCF2ABE7332008C57FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -253,6 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				AD5523602ABE7BD700136109 /* MyProfileView.swift */,
+				7D3086B92ABF4FCB00B52A66 /* MyProfileViewModel.swift */,
+				7D3086BB2ABF501D00B52A66 /* UserProfile.swift */,
 			);
 			path = MyProfileScene;
 			sourceTree = "<group>";
@@ -404,6 +410,7 @@
 				ADC1E7462ABEF93A00E4A87D /* View+Extension.swift in Sources */,
 				7DA2852F2ABEC51600427090 /* RectangleContainerModifier.swift in Sources */,
 				7DA285352ABECF0B00427090 /* RankingTopView.swift in Sources */,
+				7D3086BC2ABF501D00B52A66 /* UserProfile.swift in Sources */,
 				ADC1E74B2ABEFDDA00E4A87D /* SettingProfileImageView.swift in Sources */,
 				7D985E452ABF1C850046805F /* CornerRadiusStyle.swift in Sources */,
 				7D985E4C2ABF250A0046805F /* RankingViewModel.swift in Sources */,
@@ -418,6 +425,7 @@
 				ADC1E74F2ABF05CB00E4A87D /* SettingFandomView.swift in Sources */,
 				ADC1E74D2ABF034800E4A87D /* OnboardingView.swift in Sources */,
 				7DA285282ABEBB3900427090 /* RankingDetailView.swift in Sources */,
+				7D3086BA2ABF4FCB00B52A66 /* MyProfileViewModel.swift in Sources */,
 				ADC1E73F2ABEDAA500E4A87D /* HomeView.swift in Sources */,
 				ADC1E7492ABEFB5700E4A87D /* User.swift in Sources */,
 				ADC1E7442ABEE0B300E4A87D /* SettingUsernameView.swift in Sources */,
