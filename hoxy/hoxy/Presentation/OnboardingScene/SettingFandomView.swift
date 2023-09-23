@@ -16,7 +16,7 @@ struct SettingFandomView: View {
                           "bts", "shinee", "exo"]
     private let artistsKorean = ["monstax": "몬스타엑스", "straykids": "스트레이키즈", "lesserafim": "르세라핌",
                                "idle": "(여자)아이들", "winner": "위너", "aespa": "에스파",
-                               "bts": "방탕소년단", "shinee": "샤이니", "exo": "엑소"]
+                               "bts": "방탄소년단", "shinee": "샤이니", "exo": "엑소"]
     @State private var selectedArtist: String?
     private var didSelectedArtist: Bool {
         selectedArtist != nil
