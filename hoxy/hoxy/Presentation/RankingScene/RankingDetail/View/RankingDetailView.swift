@@ -50,6 +50,7 @@ struct RankingDetailView: View {
                     AsyncImage(url: URL(string: model.logoImagePath)) { image in
                         image
                             .resizable()
+                            .scaledToFill()
                             .frame(width: 100, height: 100)
                             .modifier(CircleImageModifier())
                             .offset(CGSize(width: 0, height: -50))
@@ -80,6 +81,7 @@ struct RankingDetailView: View {
                     AsyncImage(url: URL(string: model.artistImagePath)) { image in
                         image
                             .resizable()
+                            .scaledToFill()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: .infinity, height: 160)
                             .modifier(CornerRadiusStyle(radius: 15, corners: [.bottomLeft, .bottomRight]))
