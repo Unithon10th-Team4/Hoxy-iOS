@@ -77,11 +77,24 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 struct hoxyApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @Environment(\.scenePhase) private var scenePhase
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(UserViewModel.shared)
+        }
+        .onChange(of: scenePhase) { phase in
+            switch phase {
+            case .active:
+                // TODO: - online으로 업데이트
+                print("active TODO")
+            case .background, .inactive:
+                // TODO: - offline으로 업데이트
+                print("inactive TODO")
+            @unknown default:
+                print("unknown")
+            }
         }
     }
 }

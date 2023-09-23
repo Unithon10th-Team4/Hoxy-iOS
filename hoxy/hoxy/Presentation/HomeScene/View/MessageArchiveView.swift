@@ -9,23 +9,24 @@ import SwiftUI
 
 struct MessageArchiveView: View {
     let senderUsername: String
+    @ObservedObject private var viewModel = MessageArchiveViewModel()
     var body: some View {
         VStack {
             List {
-                ForEach(0..<15) {_ in
+                ForEach(viewModel.messages, id: \.self) { message in
                     HStack {
                         Circle()
                             .foregroundColor(.gray)
                             .frame(width: 54)
                         VStack(alignment: .leading, spacing: 5) {
                             HStack(spacing: 0) {
-                                Text("\(senderUsername)")
+                                Text("\(message.sender)")
                                     .font(.callout)
                                     .bold()
-                                Text("님이 😘를 보냈어요")
+                                Text("님이 \(message.contents)를 보냈어요")
                                     .font(.callout)
                             }
-                            Text("2023년 9월 23일")
+                            Text("\(message.timestamp)")
                                 .font(.caption)
                                 .foregroundColor(.gray)
                         }

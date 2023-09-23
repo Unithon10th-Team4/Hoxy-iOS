@@ -27,6 +27,8 @@ struct HomeView: View {
     
     // Properties for message modal
     @State private var showMessageArchive = false
+    
+    @ObservedObject private var viewModel = HomeViewModel()
     var body: some View {
         ZStack {
             Image("background")
@@ -35,13 +37,14 @@ struct HomeView: View {
             
             ProfileInRadarView(
                 radarResourceName: "myRadar",
-                imageResourceName: "sample_profile1",
+                imageResourceUrl: viewModel.currentUser?.profileImageUrl ?? "",
                 fandomImageName: "fandom",
                 radarState: .active
             )
             ProfileInRadarView(
                 radarResourceName: "anotherRadar",
-                imageResourceName: "sample_profile2",
+                // TODO: - 주변 사람 데이터
+                imageResourceUrl: viewModel.currentUser?.profileImageUrl ?? "",
                 fandomImageName: "fandom",
                 radarState: showEmojiSheet ? .active : .inactive
             )
