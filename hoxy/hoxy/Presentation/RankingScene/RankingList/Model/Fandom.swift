@@ -13,6 +13,8 @@ struct Fandom: Identifiable {
     let id: String
     let logoImagePath: String
     let fandomName: String
-    let artistName: String
+    let fandomDescription: String
     let coins: Int
+    let artistName: String
+    let artistImagePath: String
 }

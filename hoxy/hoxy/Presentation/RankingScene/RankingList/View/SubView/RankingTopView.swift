@@ -40,8 +40,3 @@ struct RankingTopView: View {
     
 }
 
-struct RankingTopView_Previews: PreviewProvider {
-    static var previews: some View {
-        RankingTopView(fandom: Fandom(id: "dd", logoImagePath: "https://qph.cf2.quoracdn.net/main-qimg-bdca6c4b24202b4e6d94a361bb4a4450-lq", fandomName: "몬베베", artistName: "몬스터엑스", coins: 1342), rank: 1)
-    }
-}
