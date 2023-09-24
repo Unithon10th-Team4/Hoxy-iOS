@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct User: Codable {
-    let name: String
+    var name: String
     let fanclubId: String
     let profileImageUrl: String
     var point: Int

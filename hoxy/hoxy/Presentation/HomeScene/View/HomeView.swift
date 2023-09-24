@@ -45,7 +45,7 @@ struct HomeView: View {
                 radarState: .active
             )
             
-            ForEach(0..<viewModel.nearbyUsersUrl.count) { index in
+            ForEach(0..<2) { index in
                 ProfileInRadarView(
                     radarResourceName: "anotherRadar",
                     // TODO: - 주변 사람 데이터
@@ -93,7 +93,7 @@ struct HomeView: View {
                                     Circle()
                                         .frame(width: 20)
                                         .foregroundColor(Color(hex: 0xF437CB))
-                                    Text("99+")
+                                    Text("7")
                                         .foregroundColor(.white)
                                         .font(.system(size: 8, weight: .medium))
                                 }

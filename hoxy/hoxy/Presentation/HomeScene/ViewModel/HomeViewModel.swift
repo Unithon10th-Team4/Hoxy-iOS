@@ -10,6 +10,7 @@ import SwiftUI
 class HomeViewModel: ObservableObject {
     @Published var currentUser: User?
     @Published var nearbyUsersUrl = [String]()
+    @Published var count: Int = 2
     
     init() {
         self.fetchCurrentUser()
@@ -34,11 +35,10 @@ extension HomeViewModel {
                        "https://i.namu.wiki/i/qvQY_47-jcT80IRvJLRv_7RxOZCvoyoaBZHqJsncaGIpwa83iYuwdxuW5hwznlarMGkoXBtwbMNAjGnun3BrPpJNctLwn3oVqSe01QMsCazBKUrCjmmJzEFCwOx6U0TN0fgckoehzEXB_4qAX2UnKA.webp"]
         
         urlList.shuffle()
-        let randomCount = Int.random(in: 0..<4)
-        if randomCount == 0 {
+        if count == 0 {
             self.nearbyUsersUrl = Array(urlList[0..<4])
         } else {
-            self.nearbyUsersUrl = Array(urlList[0..<randomCount])
+            self.nearbyUsersUrl = Array(urlList[0..<count])
         }
     }
     
