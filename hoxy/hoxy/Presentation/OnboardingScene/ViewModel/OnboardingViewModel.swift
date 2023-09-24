@@ -15,12 +15,9 @@ class UserViewModel: ObservableObject {
         currentUser = nil
     }
     
-    func setUserInformation(username: String, profileImageData: Data, artist: String) {
-//        self.currentUser = User(
-//            name: username,
-//            fanclubId: "UUID",
-//            profileImage: profileImageData
-//        )
+    func setUserInformation(username: String) {
         self.currentUser = User.testUser
+        self.currentUser?.name = username
+        
     }
 }

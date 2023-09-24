@@ -53,12 +53,7 @@ struct SettingFandomView: View {
                 
                 Button {
                     if let data = profileImageData {
-                        UserViewModel.shared.setUserInformation(
-                            username: username,
-                            profileImageData: data,
-                            artist: selectedArtist ?? "lesserafim")
-                        
-                        
+                        UserViewModel.shared.setUserInformation(username: username)
                     }
                 } label: {
                     HStack {
