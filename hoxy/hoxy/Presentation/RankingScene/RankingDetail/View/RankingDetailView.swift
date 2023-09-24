@@ -27,11 +27,12 @@ struct RankingDetailView: View {
                             .frame(height: 60)
                         
                         Text("팬덤 \(model.fandomName)")
-                            .font(.title)
+                            .font(.title3)
                             .fontWeight(.bold)
                         
                         Text(model.fandomDescription)
-                            .font(.body)
+                            .lineLimit(2)
+                            .font(.caption)
                             .foregroundColor(.gray)
                         
                         Spacer()
