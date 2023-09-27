@@ -216,8 +216,8 @@ extension APIService {
         self.fetchRequest(url: urlString) { result in
             switch result {
             case .success(let data):
-                let response = try! JSONDecoder().decode(UserProfileResponse.self, from: data)
-                onSuccess(response)
+                let response = try? JSONDecoder().decode(UserProfileResponse.self, from: data)
+                onSuccess(response ?? UserProfileResponse.localUserProfile())
             case .failure(let error):
                 onError?(error)
             }

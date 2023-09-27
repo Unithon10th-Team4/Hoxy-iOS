@@ -19,3 +19,11 @@ extension FanclubRankingResponse {
         FanclubRankingResponse(fanclubID: "msx", name: "MONBEBE", logoURL: "https://lh3.googleusercontent.com/xZwf4GUVFJ6cPnBVYH0H3ul_7lQHktqmkrNWhOEuAWQtWkGM9jDycK66i0_c8fn7atc2", fanclubInfo: "몬스타엑스 공식 팬클럽", artist: "MONSTA X", artistURL: "https://cdn.mediatribune.co.kr/news/photo/202301/4834_4905_223.jpg", point: 3241)
     ]
 }
+
+extension UserProfileResponse {
+    static func localUserProfile() -> UserProfileResponse {
+        let username = UserViewModel.shared.currentUser?.name ?? "test"
+        
+        return UserProfileResponse(name: username, fanclubID: "njs", profileImageURL: "https://wallpapers.com/images/hd/cool-profile-picture-87h46gcobjl5e4xu.jpg", point: 342)
+    }
+}
