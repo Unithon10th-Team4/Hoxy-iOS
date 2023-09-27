@@ -27,3 +27,4 @@ extension UserProfileResponse {
         return UserProfileResponse(name: username, fanclubID: "njs", profileImageURL: "https://wallpapers.com/images/hd/cool-profile-picture-87h46gcobjl5e4xu.jpg", point: 342)
     }
 }
+
