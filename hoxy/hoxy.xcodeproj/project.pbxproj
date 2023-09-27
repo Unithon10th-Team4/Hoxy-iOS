@@ -33,6 +33,7 @@
 		7DA285332ABEC9CB00427090 /* RankingDetailCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA285322ABEC9CB00427090 /* RankingDetailCoinView.swift */; };
 		7DA285352ABECF0B00427090 /* RankingTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA285342ABECF0B00427090 /* RankingTopView.swift */; };
 		7DA285392ABF090B00427090 /* ProfileInRadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA285382ABF090B00427090 /* ProfileInRadarView.swift */; };
+		7DC6077F2AC4360D00339500 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC6077E2AC4360D00339500 /* DummyData.swift */; };
 		AD5523612ABE7BD700136109 /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5523602ABE7BD700136109 /* MyProfileView.swift */; };
 		AD5523642ABE7E2700136109 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5523632ABE7E2700136109 /* Color+Extension.swift */; };
 		ADC1E7392ABE982B00E4A87D /* EmojiSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC1E7382ABE982B00E4A87D /* EmojiSheetView.swift */; };
@@ -80,6 +81,7 @@
 		7DA285322ABEC9CB00427090 /* RankingDetailCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingDetailCoinView.swift; sourceTree = "<group>"; };
 		7DA285342ABECF0B00427090 /* RankingTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTopView.swift; sourceTree = "<group>"; };
 		7DA285382ABF090B00427090 /* ProfileInRadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInRadarView.swift; sourceTree = "<group>"; };
+		7DC6077E2AC4360D00339500 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		AD5523602ABE7BD700136109 /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
 		AD5523632ABE7E2700136109 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		ADC1E7382ABE982B00E4A87D /* EmojiSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSheetView.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 		7DA285152ABE766700427090 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7DC6077E2AC4360D00339500 /* DummyData.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				7D3A79772ABF8AFD00B27326 /* FanclubDetailResponse.swift in Sources */,
 				7D985E502ABF26060046805F /* FandomDetail.swift in Sources */,
 				ADC1E7702ABF88DE00E4A87D /* Key.swift in Sources */,
+				7DC6077F2AC4360D00339500 /* DummyData.swift in Sources */,
 				ADC1E73D2ABED49E00E4A87D /* MessageArchiveView.swift in Sources */,
 				7DA285212ABEAB0700427090 /* BottomTrailingBadgeModifier.swift in Sources */,
 				7D3A79712ABF804200B27326 /* APIService.swift in Sources */,
