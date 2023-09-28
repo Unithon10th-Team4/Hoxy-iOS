@@ -25,12 +25,15 @@ extension FanclubDetailResponse {
         return FanclubDetailResponse(fanclubID: from.fanclubID, name: from.name, logoURL: from.logoURL, fanclubInfo: from.fanclubInfo, artist: from.artist, artistURL: from.artistURL, point: from.point)
     }
     
-    static func sample(id: String) {
-        FanclubRankingResponse.sample.forEach { ranking in
-            if ranking.fanclubID == id {
-                return FanclubDetailResponse.convert(ranking)
-            }
+    static func sample(id: String) -> FanclubDetailResponse {
+        
+        var result = FanclubDetailResponse(fanclubID: "bts", name: "Army", logoURL: "https://assets.stickpng.com/images/6127d5aaaa481f0004ea72b9.png", fanclubInfo: "BTS 공식 팬클럽", artist: "BTS", artistURL: "https://variety.com/wp-content/uploads/2020/09/bts-variety-cover-shoot-full-band-1-16x9-1.jpg?w=1000", point: 10386)
+        
+        for ranking in FanclubRankingResponse.sample where ranking.fanclubID == id {
+            result = FanclubDetailResponse.convert(ranking)
         }
+        
+        return result
     }
 }
 
