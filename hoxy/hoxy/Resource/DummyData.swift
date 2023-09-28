@@ -20,6 +20,20 @@ extension FanclubRankingResponse {
     ]
 }
 
+extension FanclubDetailResponse {
+    static func convert(_ from: FanclubRankingResponse) -> FanclubDetailResponse {
+        return FanclubDetailResponse(fanclubID: from.fanclubID, name: from.name, logoURL: from.logoURL, fanclubInfo: from.fanclubInfo, artist: from.artist, artistURL: from.artistURL, point: from.point)
+    }
+    
+    static func sample(id: String) {
+        FanclubRankingResponse.sample.forEach { ranking in
+            if ranking.fanclubID == id {
+                return FanclubDetailResponse.convert(ranking)
+            }
+        }
+    }
+}
+
 extension UserProfileResponse {
     static func localUserProfile() -> UserProfileResponse {
         let username = UserViewModel.shared.currentUser?.name ?? "test"
