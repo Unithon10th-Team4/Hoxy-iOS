@@ -12,12 +12,13 @@ struct MyProfileView: View {
     @ObservedObject var viewModel = MyProfileViewModel()
     
     var body: some View {
+        
+        NavigationView {
         ZStack {
             Image("bg_blue")
                 .resizable()
                 .ignoresSafeArea()
             
-            NavigationView {
             // 최상단 유저 정보
                 VStack(alignment: .leading, spacing: 15) {
                     Spacer().frame(height: 64)
