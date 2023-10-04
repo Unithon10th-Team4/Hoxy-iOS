@@ -29,17 +29,14 @@ extension HomeViewModel {
     }
     
     func fetchNearbyUser() {
-        var urlList = ["https://spnimage.edaily.co.kr/images/photo/files/NP/S/2022/03/PS22031100088.jpg",
-                       "https://i.namu.wiki/i/Ta5PAcOXv9rCMOdOit7TXUcM9c0wStpeEF4_5TBMFVPfOicbQRQ5a2Lsa0UN7KuV3SIMiejAr1l34WFDai27YMXt8fNAFR0BgEKhuCm9SjrTUdMJY3TtVLeukxA3Ny-yQQM8wy1v2QuS9dWZc8owiw.webp",
-                       "https://i.namu.wiki/i/Cnng9OjP_KFCIV7hs5bI2Rc3PZAK2gQHuDAOvZN12LndBEYwLNmOtQTXyzkYIeXHqH8jroeSm7pcnoCwS-lXB7n2hTGeiwAQWPmWFB4yqLhQPPzOwy70oE3bN1Dba69OGMjegRr95cbHRfpRempjBw.webp",
-                       "https://i.namu.wiki/i/qvQY_47-jcT80IRvJLRv_7RxOZCvoyoaBZHqJsncaGIpwa83iYuwdxuW5hwznlarMGkoXBtwbMNAjGnun3BrPpJNctLwn3oVqSe01QMsCazBKUrCjmmJzEFCwOx6U0TN0fgckoehzEXB_4qAX2UnKA.webp"]
+        var urlList = [
+            "https://cdn-ajggd.nitrocdn.com/kMoOFpDlsOVtlYJLrnSRNCQXaUFHZPTY/assets/images/optimized/rev-81d704b/shotkit.com/wp-content/uploads/bb-plugin/cache/cool-profile-pic-matheus-ferrero-landscape-6cbeea07ce870fc53bedd94909941a4b-zybravgx2q47.jpeg",
+            "https://play-lh.googleusercontent.com/0SAFn-mRhhDjQNYU46ZwA7tz0xmRiQG4ZuZmuwU8lYmqj6zEpnqsee_6QDuhQ4ZofwXj=w240-h480-rw",
+            "https://cdn-ajggd.nitrocdn.com/kMoOFpDlsOVtlYJLrnSRNCQXaUFHZPTY/assets/images/optimized/rev-81d704b/shotkit.com/wp-content/uploads/bb-plugin/cache/cool-profile-pic-matheus-ferrero-landscape-6cbeea07ce870fc53bedd94909941a4b-zybravgx2q47.jpeg",
+            "https://play-lh.googleusercontent.com/0SAFn-mRhhDjQNYU46ZwA7tz0xmRiQG4ZuZmuwU8lYmqj6zEpnqsee_6QDuhQ4ZofwXj=w240-h480-rw"
+        ]
         
-        urlList.shuffle()
-        if count == 0 {
-            self.nearbyUsersUrl = Array(urlList[0..<4])
-        } else {
-            self.nearbyUsersUrl = Array(urlList[0..<count])
-        }
+        self.nearbyUsersUrl = urlList
     }
     
     func sendEmojiMessage(emoji sendedEmoji: String) {

@@ -16,7 +16,7 @@ class UserViewModel: ObservableObject {
     }
     
     func setUserInformation(username: String) {
-        self.currentUser = User.testUser
+        self.currentUser = User.sample
         self.currentUser?.name = username
         
     }

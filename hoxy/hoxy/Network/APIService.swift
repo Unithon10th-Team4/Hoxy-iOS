@@ -84,8 +84,8 @@ extension APIService {
         self.fetchRequest(url: urlString) { result in
             switch result {
             case .success(let data):
-                let response = try! JSONDecoder().decode(FanclubDetailResponse.self, from: data)
-                onSuccess(response)
+                let response = try? JSONDecoder().decode(FanclubDetailResponse.self, from: data)
+                onSuccess(response ?? FanclubDetailResponse.sample(id: id))
             case .failure(let error):
                 onError?(error)
             }
@@ -101,8 +101,8 @@ extension APIService {
         self.fetchRequest(url: urlString) { result in
             switch result {
             case .success(let data):
-                let response = try! JSONDecoder().decode([MessageResponse].self, from: data)
-                onSuccess(response)
+                let response = try? JSONDecoder().decode([MessageResponse].self, from: data)
+                onSuccess(response ?? MessageResponse.sample)
             case .failure(let error):
                 onError?(error)
             }
@@ -183,8 +183,8 @@ extension APIService {
         self.fetchRequest(url: urlString) { result in
             switch result {
             case .success(let data):
-                let response = try! JSONDecoder().decode(User.self, from: data)
-                onSuccess(response)
+                let response = try? JSONDecoder().decode(User.self, from: data)
+                onSuccess(response ?? User.sample)
             case .failure(let error):
                 onError?(error)
             }
@@ -196,8 +196,8 @@ extension APIService {
         self.fetchRequest(url: urlString) { result in
             switch result {
             case .success(let data):
-                let response = try! JSONDecoder().decode(User.self, from: data)
-                onSuccess(response)
+                let response = try? JSONDecoder().decode(User.self, from: data)
+                onSuccess(response ?? User.sample)
             case .failure(let error):
                 onError?(error)
             }

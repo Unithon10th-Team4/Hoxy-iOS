@@ -8,8 +8,7 @@
 import Foundation
 
 class MyProfileViewModel: ObservableObject {
-    @Published var userProfile: UserProfile = UserProfile(username: "", profileImagePath: "", fandomImagePath: "", fandomName: "", artistName: "", coins: 0)
-    
+    @Published var userProfile = UserProfile.sample
     init() {
         self.updateUserProfile()
     }
