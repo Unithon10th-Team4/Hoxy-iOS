@@ -33,10 +33,6 @@ struct ContentView: View {
                         systemImage: "person.fill")
                 }
         }
-        .accentColor(.black)
-        .fullScreenCover(isPresented: .constant(viewModel.currentUser == nil)) {
-            OnboardingView()
-        }
     }
 }
 
