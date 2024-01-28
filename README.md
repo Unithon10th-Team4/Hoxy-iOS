@@ -6,14 +6,14 @@
 > 
 
 지금 내 주변에 같은 팬덤의 팬이 있는지 알고 싶지만, 덕밍아웃은 수줍다면🙈
-**`HOXY`**로 내 주변 팬덤을 찾아 이모지로 함께 소통하고, 코인도 적립해 보세요!
+`HOXY`로 내 주변 팬덤을 찾아 이모지로 함께 소통하고, 코인도 적립해 보세요!
 
 ![Slide 16_9 - 19 (1).png](media/Slide_16_9_-_19_(1).png)
 
 ### 🎵 서비스 기획 의도
 
 콘서트장, 팬싸인회 같은 특정 공간이 아니라, 
-내가 있는 “**지금 이 공간”**에 같은 가수를 응원하는 팬이 있는지 궁금한 적 있지 않으신가요?🤔
+내가 있는 “지금 이 공간”에 같은 가수를 응원하는 팬이 있는지 궁금한 적 있지 않으신가요?🤔
 
 한 증권사 팬덤 경제학 보고서에 따르면 2020년 팬덤 경제의 규모는 7조 9,000억원으로 추산되고 있으며,
 2020년 9월 기준 한류 팬 수는 1억 477만 7,808명으로 K-POP 시장에서 **‘팬덤’의 가치**는 더욱 커지고 있습니다.
@@ -44,7 +44,7 @@
 **코인 🤑**
 
 - 탐색 과정에서 이모지를 전송하면 코인을 적립할 수 있어요.
-- 적립된 코인은 **‘후즈팬’**에서 자유롭게 사용할 수 있어요.
+- 적립된 코인은 ‘후즈팬’에서 자유롭게 사용할 수 있어요.
 
 ### 🎵 **프로젝트 현황, 기술스택**
 
@@ -52,11 +52,11 @@
 
 - **팀 발표자료(PDF)**
 
-[HOXY_서비스 브리프.pdf](https://www.notion.so/unit-center/HOXY-958c99ba1fc8499a8f971551d2bf4059?pvs=4#b83fa2c07ba64ecfadc7b8defb5d1a0d)
+[HOXY_서비스 브리프.pdf](https://file.notion.so/f/f/9f325b5e-9f61-4603-9788-e4d9df3d7836/c18929b0-142f-469a-817f-7baa4bf29f1e/HOXY_%E1%84%89%E1%85%A5%E1%84%87%E1%85%B5%E1%84%89%E1%85%B3_%E1%84%87%E1%85%B3%E1%84%85%E1%85%B5%E1%84%91%E1%85%B3.pdf?id=b83fa2c0-7ba6-4ecf-adc7-b8defb5d1a0d&table=block&spaceId=9f325b5e-9f61-4603-9788-e4d9df3d7836&expirationTimestamp=1706558400000&signature=gKQ5BHhjRLMIWQv3n-RIJuypMLpKS6aswh6kP9iGa94&downloadName=HOXY_%E1%84%89%E1%85%A5%E1%84%87%E1%85%B5%E1%84%89%E1%85%B3+%E1%84%87%E1%85%B3%E1%84%85%E1%85%B5%E1%84%91%E1%85%B3.pdf)
 
-- **시연영상** ← 필수
+- **시연영상**
     
-    [hoxy,,,.mp4](https://www.notion.so/unit-center/HOXY-958c99ba1fc8499a8f971551d2bf4059?pvs=4#ff026eb58133498096f6d0cc26e3ddf8)
+[HOXY 시연영상.mp4](https://file.notion.so/f/f/9f325b5e-9f61-4603-9788-e4d9df3d7836/5b88a81b-0a34-4de7-bbea-c2f01975c538/hoxy.mp4?id=ff026eb5-8133-4980-96f6-d0cc26e3ddf8&table=block&spaceId=9f325b5e-9f61-4603-9788-e4d9df3d7836&expirationTimestamp=1706558400000&signature=YR5ZDVnsnPMMbiUQPBJJlSQ3qqhm7UhfRoqzyn0mTwI&downloadName=hoxy%2C%2C%2C.mp4)
     
 - **GitHub :** [iOS](https://github.com/orgs/Unithon10th-Team4/repositories), [Backend](https://github.com/Unithon10th-Team4/Hoxy-BE)
 - **Design :** [Figma](https://www.figma.com/file/Y4EkCkd7aCPgcwKZ2f7PbF/%EB%94%94%EC%9E%90%EC%9D%B8-%EB%B3%B4%EB%93%9C?type=design&node-id=255%3A2233&mode=design&t=ohROR94P42QvtFY0-1)
@@ -65,7 +65,7 @@
 
 - `Team` Figma, Discord, Notion
 - `Design` Figma
-- `Backend` Spring, Redis***,*** AWS S3, ngrok
+- `Backend` Spring, Redis, AWS S3, ngrok
 - `iOS` Swift, SwiftUI
 
 ---
@@ -83,11 +83,3 @@
 | 박현제 | Backend | sudomenda@gmail.com | 즐겨봅시당~~~~~ |
 | 문다연 | iOS | 0217dayun@naver.com | 놀고 먹고 떠들고 코딩하고 💃  |
 | 최대건 | iOS | chcs1370@gmail.com | 즐겁게 해봐욥 |
-
-### 추가 자료
-
-[아이디어 회의](https://www.notion.so/587996db32554349b1d5efcbdc66ae64?pvs=21)
-
-[아이디어 최종](https://www.notion.so/8ceb765bb2c54513b63b60489beb5dd6?pvs=21)
-
-[서버 회의록](https://www.notion.so/57db2431b60747d292e8bc57237048ff?pvs=21)
